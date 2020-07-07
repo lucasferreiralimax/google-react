@@ -19,3 +19,22 @@
 .App-link {
   color: #61dafb;
 }
+
+.App-search .icon-search,
+.App-search .icon-voice {
+  width: 20px;
+}
+
+.App-search input {
+  border-radius: 100px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 100%;
+  max-width: 582px;
+}
+
+.App-search input:focus {
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  border-color: rgba(223,225,229,0);
+  outline: none;
+}
