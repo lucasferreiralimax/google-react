@@ -42,6 +42,7 @@
   position: absolute;
   top: 12px;
   left: 12px;
+  pointer-events: none;
 }
 
 .App-search input {
@@ -59,7 +60,8 @@
   outline: none;
 }
 
-.App-search button {
+.App-search .btn.keyboard,
+.App-search .btn.voice {
   background: transparent;
   border: 0;
   font-size: 0;
@@ -70,12 +72,30 @@
   top: 0;
 }
 
-.App-search button:nth-of-type(1) {
+.App-search .btn.keyboard {
   right: 40px;
 }
 
-.App-search button:nth-of-type(2) {
+.App-search .btn.voice {
   right: 12px;
+}
+
+.btn {
+  background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  color: #5F6368;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
 
 .App-footer {
