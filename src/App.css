@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -14,10 +19,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #000;
+  margin-bottom: 30px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.App-search {
+  position: relative;
+  width: 100%;
+  max-width: 582px;
+  margin: 0 auto;
 }
 
 .App-search .icon-search,
@@ -25,16 +38,46 @@
   width: 20px;
 }
 
+.App-search .icon-search {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
 .App-search input {
   border-radius: 100px;
   border: 1px solid #ccc;
-  padding: 15px;
+  box-sizing: border-box;
+  padding: 15px 75px 15px 40px;
   width: 100%;
-  max-width: 582px;
+  transition: .2s all;
 }
 
 .App-search input:focus {
   box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
   border-color: rgba(223,225,229,0);
   outline: none;
+}
+
+.App-search button {
+  background: transparent;
+  border: 0;
+  font-size: 0;
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 47px;
+  top: 0;
+}
+
+.App-search button:nth-of-type(1) {
+  right: 40px;
+}
+
+.App-search button:nth-of-type(2) {
+  right: 12px;
+}
+
+.App-footer {
+  margin-top: 30px;
 }
