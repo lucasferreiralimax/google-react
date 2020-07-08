@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="App-footer">
-      <strong>Brasil</strong>
+      <a href="http://lucas-x.web.app"><strong>Brasil - @lucasferreiralimax</strong></a>
     </footer>
   );
 }
