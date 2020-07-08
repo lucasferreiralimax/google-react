@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 82px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,6 +10,7 @@
 .App-logo {
   cursor: pointer;
   transition: .3s transform;
+  outline: none;
 }
 
 .App-logo:hover {
@@ -32,13 +33,20 @@
   margin-bottom: 30px;
 }
 
+.App-header h1 {
+  color: #fff;
+  text-shadow: 0 0 150px #000, 0 0 100px #ff0, 0 0 50px #0f0, 0 -2px 15px #0f0;
+  user-select: none;
+  cursor: none;
+}
+
 .App-link {
   color: #61dafb;
 }
 
 .App-search {
   position: relative;
-  width: 100%;
+  width: calc(100% - 50px);
   max-width: 582px;
   margin: 0 auto;
 }
@@ -118,5 +126,22 @@
 }
 
 .App-footer {
+  background: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+  color: rgba(0,0,0,.54);
+  width: 100%;
   margin-top: 30px;
+  padding: 30px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+}
+
+.App-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.App-footer a:hover {
+  color: green;
 }
