@@ -8,7 +8,17 @@
 }
 
 .App-logo {
-  pointer-events: none;
+  cursor: pointer;
+  transition: .3s transform;
+}
+
+.App-logo:hover {
+  transform: scale(1.05);
+}
+
+.App-logo:active,
+.App-logo:focus {
+  transform: scale(0.94);
 }
 
 .App-header {
@@ -35,14 +45,16 @@
 
 .App-search .icon-search,
 .App-search .icon-voice {
-  width: 20px;
+  width: 25px;
 }
 
 .App-search .icon-search {
   position: absolute;
   top: 12px;
   left: 12px;
+  width: 20px;
   pointer-events: none;
+  opacity: 0.45;
 }
 
 .App-search input {
@@ -51,6 +63,7 @@
   box-sizing: border-box;
   padding: 15px 75px 15px 40px;
   width: 100%;
+  margin-bottom: 20px;
   transition: .2s all;
 }
 
@@ -67,17 +80,23 @@
   font-size: 0;
   position: absolute;
   cursor: pointer;
-  width: 30px;
+  width: 47px;
   height: 47px;
   top: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-search .btn.keyboard {
-  right: 40px;
+  right: 45px;
 }
 
 .App-search .btn.voice {
-  right: 12px;
+  right: 5px;
 }
 
 .btn {
