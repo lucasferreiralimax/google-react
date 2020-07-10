@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import keyboard from '../keyboard.png';
+import keyboard from '../../keyboard.png';
+import './Search.css';
 
 function Search(props) {
   const [name, setName] = useState("");

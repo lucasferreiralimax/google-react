@@ -22,89 +22,8 @@
   transform: scale(0.94);
 }
 
-.App-header {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #000;
-  margin-bottom: 30px;
-}
-
-.App-header h1 {
-  color: #fff;
-  text-shadow: 0 0 150px #000, 0 0 100px #ff0, 0 0 50px #0f0, 0 -2px 15px #0f0;
-  user-select: none;
-  cursor: none;
-}
-
 .App-link {
   color: #61dafb;
-}
-
-.App-search {
-  position: relative;
-  width: calc(100% - 50px);
-  max-width: 582px;
-  margin: 0 auto;
-}
-
-.App-search .icon-search,
-.App-search .icon-voice {
-  width: 25px;
-}
-
-.App-search .icon-search {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 20px;
-  pointer-events: none;
-  opacity: 0.45;
-}
-
-.App-search input {
-  border-radius: 100px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  padding: 15px 75px 15px 40px;
-  width: 100%;
-  margin-bottom: 20px;
-  transition: .2s all;
-}
-
-.App-search input:focus {
-  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
-  border-color: rgba(223,225,229,0);
-  outline: none;
-}
-
-.App-search .btn.keyboard,
-.App-search .btn.voice {
-  background: transparent;
-  border: 0;
-  font-size: 0;
-  position: absolute;
-  cursor: pointer;
-  width: 47px;
-  height: 47px;
-  top: 0;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.App-search .btn.keyboard {
-  right: 45px;
-}
-
-.App-search .btn.voice {
-  right: 5px;
 }
 
 .btn {
@@ -123,25 +42,4 @@
   text-align: center;
   cursor: pointer;
   user-select: none;
-}
-
-.App-footer {
-  background: #f2f2f2;
-  border-top: 1px solid #e4e4e4;
-  color: rgba(0,0,0,.54);
-  width: 100%;
-  margin-top: 30px;
-  padding: 30px;
-  box-sizing: border-box;
-  position: absolute;
-  bottom: 0;
-}
-
-.App-footer a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.App-footer a:hover {
-  color: green;
 }
