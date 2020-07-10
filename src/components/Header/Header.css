@@ -11,7 +11,7 @@
 
 .App-header:hover h1 {
   opacity: 1;
-  transform: scale(1) translateY(0);
+  transform: scale(1) translateY(-150px);
 }
 
 .App-header h1 {
@@ -20,7 +20,30 @@
   user-select: none;
   cursor: none;
   opacity: 0;
-  transform: scale(0) translateY(300px);
+  transform: scale(0) translateY(0);
   transform-origin: bottom;
   transition: .5s opacity, 1s transform;
+  position: absolute;
+}
+
+.App-logo {
+  cursor: pointer;
+  transition: .3s transform;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.App-logo:hover {
+  transform: scale(1.05);
+}
+
+.App-logo:active,
+.App-logo:focus {
+  transform: scale(0.94);
 }

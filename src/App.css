@@ -7,21 +7,6 @@
   flex-direction: column;
 }
 
-.App-logo {
-  cursor: pointer;
-  transition: .3s transform;
-  outline: none;
-}
-
-.App-logo:hover {
-  transform: scale(1.05);
-}
-
-.App-logo:active,
-.App-logo:focus {
-  transform: scale(0.94);
-}
-
 .App-link {
   color: #61dafb;
 }
