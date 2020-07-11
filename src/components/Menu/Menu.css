@@ -1,0 +1,61 @@
+
+.App-nav {
+  background: #f2f2f2;
+  border-right: 1px solid #e4e4e4;
+  color: rgba(0,0,0,.54);
+  width: calc(80% - 20px);
+  padding: 30px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  transition: .5s all;
+  z-index: 99;
+}
+
+.App-nav.active {
+  box-shadow: 10px 0 20px rgba(0,0,0,.2);
+  transform: translateX(0);
+}
+
+.App-nav-item {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.App-nav-item svg {
+  float: left;
+}
+
+.App-nav-item:first-of-type {
+  border-radius: 5px 5px 0 0;
+}
+
+.App-nav-item:last-of-type {
+  border-radius: 0 0 5px 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.App-nav-item:hover {
+  background: #fff;
+}
+
+.App-nav-menu {
+  position: fixed;
+  top: 20px;
+  right: -70px;
+  opacity: .8;
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .App-nav {
+    max-width: 300px;
+  }
+}
