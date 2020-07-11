@@ -1,5 +1,13 @@
-
 .App-nav {
+  position: relative;
+}
+
+.App-nav.active .App-nav-content {
+  box-shadow: 10px 0 20px rgba(0,0,0,.2);
+  transform: translateX(0);
+}
+
+.App-nav-content {
   background: #f2f2f2;
   border-right: 1px solid #e4e4e4;
   color: rgba(0,0,0,.54);
@@ -13,11 +21,6 @@
   transform: translateX(-100%);
   transition: .5s all;
   z-index: 99;
-}
-
-.App-nav.active {
-  box-shadow: 10px 0 20px rgba(0,0,0,.2);
-  transform: translateX(0);
 }
 
 .App-nav-item {
@@ -49,13 +52,31 @@
 .App-nav-menu {
   position: fixed;
   top: 20px;
-  right: -70px;
+  left: 20px;
   opacity: .8;
   cursor: pointer;
 }
 
 @media (min-width: 800px) {
-  .App-nav {
+  .App-nav-content {
     max-width: 300px;
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.3);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: .3s all;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
