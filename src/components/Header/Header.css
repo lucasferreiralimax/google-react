@@ -7,6 +7,7 @@
   font-size: calc(10px + 2vmin);
   color: #000;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .App-header:hover h1 {
@@ -24,6 +25,24 @@
   transform-origin: bottom;
   transition: .5s opacity, 1s transform;
   position: absolute;
+  width: 300%;
+}
+
+.App-header a {
+  font-size: 12px;
+  font-weight: normal;
+  color: #777;
+  position: absolute;
+  top: 5px;
+  left: 235px;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  text-decoration: none;
+}
+
+.App-header a:hover {
+  color: #61dafb;
 }
 
 .App-logo {
