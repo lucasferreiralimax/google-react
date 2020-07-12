@@ -27,9 +27,13 @@
   background: #fff;
   border: 1px solid #ccc;
   border-bottom: 0;
+  color: #777;
   width: 100%;
   padding: 1rem;
   cursor: pointer;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
 }
 
 .App-nav-item svg {
@@ -38,7 +42,7 @@
 
 .App-nav-item span {
   display: block;
-  padding: 5px 0 0 35px;
+  padding-left: 35px;
   text-align: left;
 }
 
