@@ -1,17 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Menu.css';
 
 function Menu() {
-
-  const menu = (e) => {
-    document.querySelector('.App-nav').classList.toggle('active')
-    document.querySelector('.App-nav .overlay').classList.toggle('active')
-    console.log('Menu ' + document.querySelector('.App-nav').classList)
-    // alert('Calma, que to aprendendo aos poucos.')
-  };
+  const [nav, setNav] = useState(false)
+  const menu = () => setNav(!nav)
 
   return (
-    <nav className="App-nav">
+    <nav className={ `App-nav${nav ? ' active' : '' }`}>
       <button type="button" className="App-nav-menu" onClick={menu}>
         <svg fill="#757575" height="25px" viewBox="0 0 25 25" width="25px" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 0h24v24H0z" fill="none"></path>
@@ -34,7 +29,7 @@ function Menu() {
           Configurações
         </button>
       </div>
-      <div className="overlay" onClick={menu}></div>
+      <div className={ `overlay${nav ? ' active' : '' }`} onClick={menu}></div>
     </nav>
   );
 }
