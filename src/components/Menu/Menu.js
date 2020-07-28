@@ -1,10 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './Menu.css';
 
 function Menu() {
   const [nav, setNav] = useState(false)
   const menu = () => setNav(!nav)
+  const menuEvent = (e) => {
+    if (e.keyCode === 27 || e.key === 'Escape') {
+      setNav(false)
+    }
+  }
+
+  useEffect(() => {
+    let links = document.querySelectorAll('.App-nav-item')
+    for(let link of links) { link.addEventListener('click', menu) }
+
+    document.addEventListener('keyup', menuEvent)
+
+    return () => {
+      for(let link of links) { link.removeEventListener('click', menu) }
+
+      document.removeEventListener('keyup', menuEvent)
+    }
+  })
 
   return (
     <nav className={ `App-nav${nav ? ' active' : '' }`}>

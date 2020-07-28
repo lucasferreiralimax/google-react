@@ -68,7 +68,6 @@
   border: 0;
   background: transparent;
   user-select: none;
-  outline: none;
 }
 
 .App-nav-menu:hover::after,
