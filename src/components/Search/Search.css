@@ -28,12 +28,17 @@
   width: 100%;
   margin-bottom: 20px;
   transition: .2s all;
+  outline: none;
+}
+
+.App-search input:hover {
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  border-color: rgba(223,225,229,0);
 }
 
 .App-search input:focus {
   box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
   border-color: rgba(223,225,229,0);
-  outline: none;
 }
 
 .App-search .btn.keyboard,
@@ -60,4 +65,13 @@
 
 .App-search .btn.voice {
   right: 5px;
+}
+
+.App-search .btn.search:hover,
+.App-search .btn.lucky:hover {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-color: #f8f8f8;
+  border: 1px solid #c6c6c6;
+  color: #222;
 }
