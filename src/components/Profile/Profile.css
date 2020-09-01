@@ -8,6 +8,7 @@
   justify-content: flex-end;
   align-items: start;
   z-index: 99;
+  text-align: center;
 }
 
 .App-profile > h1 {

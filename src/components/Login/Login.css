@@ -40,7 +40,6 @@
 }
 
 .App-login-label {
-  background: #fff;
   box-sizing: border-box;
   color: #80868b;
   font-size: 16px;
@@ -49,7 +48,7 @@
   top: 22px;
   left: 18px;
   bottom: 17px;
-  transition: .15s all;
+  transition: .15s top, .15s transform;
   display: inline-block;
 }
 
@@ -72,10 +71,31 @@
 
 .App-login-input:focus + .App-login-label,
 .App-login-control.placeholder .App-login-label {
+  background: #fff;
   top: 0;
-  transform: scale(.75) translateX(-40px);
+  transform: scale(.75) translateX(-35px);
   height: 20px;
   padding: 0 4px;
+}
+
+.App-login-control.error .App-login-label {
+  color: #d93025;
+}
+.App-login-control.error .App-login-input {
+  border-color: #d93025;
+  box-shadow: 0 0 0 1px #d93025;
+}
+
+.App-login-error {
+  color: #d93025;
+  font-size: 12px;
+  margin-bottom: 1em;
+}
+
+.App-login-error svg {
+  fill: #d93025;
+  margin-right: 8px;
+  transform: translateY(2px);
 }
 
 .App-login .btn {
