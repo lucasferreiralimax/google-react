@@ -4,6 +4,7 @@
   width: calc(100% - 50px);
   max-width: 582px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .App-search .icon-search,
