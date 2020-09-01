@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Menu from './components/Menu/Menu';
 import Header from './components/Header/Header';
+import Login from './components/Login/Login';
 import Profile from './components/Profile/Profile';
 import Search from './components/Search/Search';
 import Footer from './components/Footer/Footer';
@@ -17,6 +18,9 @@ function App() {
       <div className="App">
         <Menu />
         <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/config">
             <h1>Configurações</h1>
           </Route>
