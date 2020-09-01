@@ -1,5 +1,6 @@
 .App-nav {
   position: relative;
+  z-index: 2;
 }
 
 .App-nav.active .App-nav-content {
