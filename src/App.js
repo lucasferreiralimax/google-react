@@ -7,6 +7,7 @@ import {
 import Menu from './components/Menu/Menu';
 import Header from './components/Header/Header';
 import Login from './components/Login/Login';
+import Config from './components/Config/Config';
 import Profile from './components/Profile/Profile';
 import Search from './components/Search/Search';
 import Footer from './components/Footer/Footer';
@@ -22,7 +23,7 @@ function App() {
             <Login />
           </Route>
           <Route path="/config">
-            <h1>Configurações</h1>
+            <Config />
           </Route>
           <Route path="/">
             <Profile />

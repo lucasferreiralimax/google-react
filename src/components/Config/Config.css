@@ -1,0 +1,26 @@
+.App-config label {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  transition: .3s all;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.App-config label:hover {
+  background: #ddd;
+}
+
+.App-config label:last-of-type {
+  margin-bottom: 0;
+}
+
+.App-config input {
+  margin-left: 10px;
+  width: calc(100% - 60px);
+}
+
+.App-config label,
+.App-config input {
+  cursor: pointer;
+}
