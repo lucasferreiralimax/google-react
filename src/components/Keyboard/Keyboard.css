@@ -1,0 +1,78 @@
+.App-keyboard {
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #b8b8b8;
+  border: 1px solid rgba(0,0,0,0.3);
+  z-index: 2147483644;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  position: fixed;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.App-keyboard h1 {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  font-weight: normal;
+  line-height: 25px;
+  margin: 0;
+}
+
+.App-keyboard .key {
+  border: 1px solid #dcdcdc;
+  border: 1px solid rgba(0,0,0,0.1);
+  width: 29px;
+  height: 29px;
+  margin: 2px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  padding: 1px;
+  min-width: 0px;
+  max-width: 500px;
+  min-height: 0px;
+  max-height: 50px;
+  color: #444;
+  background-color: #f5f5f5;
+  background-image: linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));
+  background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: linear-gradient(top,#f5f5f5,#f1f1f1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f5f5f5',EndColorStr='#f1f1f1');
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+
+.App-keyboard .key:hover {
+  border-color: #c6c6c6;
+  color: #222;
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));
+  background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f8f8f8',EndColorStr='#f1f1f1');
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+}
+
+.App-keyboard .key:active,
+.App-keyboard .key:focus {
+  border-color: #c6c6c6;
+  color: #333;
+  background-color: #f6f6f6;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#f1f1f1));
+  background-image: -webkit-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: linear-gradient(top,#f6f6f6,#f1f1f1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f6f6f6',EndColorStr='#f1f1f1');
+  box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
+}
