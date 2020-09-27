@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './Keyboard.css';
 
-function Keyboard() {
+function Keyboard({ store, dispatch }) {
   return (
-    <section className="App-keyboard">
+    <section className={ `App-keyboard${store.keyboard ? ' active' : '' }`}>
       <h1>português brasileiro</h1>
-      <button type="button">X</button>
+      <button className="exit" type="button" onClick={() => dispatch({type: 'TOGGLE_KEYBOARD'})}>X</button>
       <div className="App-keyboard-content">
         <div className="row">
           <button className="key" type="button">'</button>
@@ -21,9 +22,9 @@ function Keyboard() {
           <button className="key" type="button">0</button>
           <button className="key" type="button">-</button>
           <button className="key" type="button">=</button>
-          <button className="key" type="button">backspace</button>
+          <button className="key" type="button" style={{width: '62px'}}>backspace</button>
         </div>
-        <div className="row">
+        <div className="row" style={{paddingLeft: '50px'}}>
           <button className="key" type="button">q</button>
           <button className="key" type="button">w</button>
           <button className="key" type="button">e</button>
@@ -38,7 +39,7 @@ function Keyboard() {
           <button className="key" type="button">[</button>
         </div>
         <div className="row">
-          <button className="key" type="button">Capslock</button>
+          <button className="key" type="button" style={{width: '53.75px'}}>Capslock</button>
           <button className="key" type="button">a</button>
           <button className="key" type="button">s</button>
           <button className="key" type="button">d</button>
@@ -53,7 +54,7 @@ function Keyboard() {
           <button className="key" type="button">]</button>
         </div>
         <div className="row">
-          <button className="key" type="button">shitf 1</button>
+          <button className="key" type="button" style={{width: '37.25px'}}>shitf 1</button>
           <button className="key" type="button">\</button>
           <button className="key" type="button">z</button>
           <button className="key" type="button">x</button>
@@ -65,16 +66,20 @@ function Keyboard() {
           <button className="key" type="button">,</button>
           <button className="key" type="button">.</button>
           <button className="key" type="button">;</button>
-          <button className="key" type="button">shift 2</button>
+          <button className="key" type="button" style={{width: '86.75px'}}>shift 2</button>
         </div>
         <div className="row">
-          <button className="key" type="button">Ctrl+Alt</button>
-          <button className="key" type="button">whitespace</button>
-          <button className="key" type="button">Ctrl+Alt</button>
+          <button className="key" type="button" style={{width: '95px'}}>Ctrl+Alt</button>
+          <button className="key" type="button" style={{width: '293px'}}>whitespace</button>
+          <button className="key" type="button" style={{width: '95px'}}>Ctrl+Alt</button>
         </div>
       </div>
     </section>
   );
 }
 
-export default Keyboard;
+function mapStateToProps(state) {
+  return { store: state }
+}
+
+export default connect(mapStateToProps)(Keyboard);

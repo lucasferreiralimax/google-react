@@ -1,6 +1,7 @@
 .App-keyboard {
   height: auto;
   padding: 10px;
+  margin: 10px;
   background-color: white;
   border: 1px solid #b8b8b8;
   border: 1px solid rgba(0,0,0,0.3);
@@ -9,6 +10,22 @@
   font-size: 14px;
   position: fixed;
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: .3s all;
+  pointer-events: none;
+}
+
+.App-keyboard.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.App-keyboard .exit {
+  border: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
 
 .App-keyboard h1 {
@@ -22,14 +39,13 @@
 .App-keyboard .key {
   border: 1px solid #dcdcdc;
   border: 1px solid rgba(0,0,0,0.1);
-  width: 29px;
+  min-width: 29px;
   height: 29px;
   margin: 2px;
   text-align: center;
   vertical-align: middle;
   position: relative;
   padding: 1px;
-  min-width: 0px;
   max-width: 500px;
   min-height: 0px;
   max-height: 50px;
@@ -46,6 +62,7 @@
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
+  cursor: pointer;
 }
 
 .App-keyboard .key:hover {
