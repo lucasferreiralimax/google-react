@@ -12,6 +12,7 @@
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
   opacity: 0;
   transition: .3s all;
+  user-select: none;
   pointer-events: none;
 }
 
