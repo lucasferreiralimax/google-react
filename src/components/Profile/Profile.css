@@ -5,7 +5,7 @@
   right: 1em;
   display: flex;
   justify-content: flex-end;
-  align-items: start;
+  align-items: flex-start;
   z-index: 9;
   text-align: center;
 }
