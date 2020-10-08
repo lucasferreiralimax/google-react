@@ -5,7 +5,7 @@ const INITIAL_STATE = {
 }
 
 function reducer(state = INITIAL_STATE, action) {
-  if(action.type == 'TOGGLE_KEYBOARD') {
+  if(action.type === 'TOGGLE_KEYBOARD') {
     return { ...state , keyboard: !state.keyboard }
   }
   return state
