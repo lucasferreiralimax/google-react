@@ -1,6 +1,11 @@
 {
   "name": "google-react",
   "version": "0.1.0",
+  "author": "lucasferreiralimax (https://github.com/lucasferreiralimax)",
+  "repository": "https://github.com/lucasferreiralimax/chat-vue",
+  "bugs": {
+    "url": "https://github.com/lucasferreiralimax/chat-vue/issues"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
