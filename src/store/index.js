@@ -1,12 +1,16 @@
 import { createStore } from 'redux'
 
 const INITIAL_STATE = {
-  keyboard: false
+  keyboard: false,
+  darkmode: JSON.parse(localStorage.getItem('darkmode'))
 }
 
 function reducer(state = INITIAL_STATE, action) {
   if(action.type === 'TOGGLE_KEYBOARD') {
     return { ...state , keyboard: !state.keyboard }
+  }
+  if(action.type === 'TOGGLE_DARKMODE') {
+    return { ...state , darkmode: !state.darkmode}
   }
   return state
 }
