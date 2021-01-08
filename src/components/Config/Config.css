@@ -15,11 +15,6 @@
   margin-bottom: 0;
 }
 
-.App-config input {
-  margin-left: 10px;
-  width: calc(100% - 60px);
-}
-
 .App-config label,
 .App-config input {
   cursor: pointer;

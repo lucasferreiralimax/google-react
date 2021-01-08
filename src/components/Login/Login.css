@@ -12,7 +12,7 @@
 }
 
 .App-login h1 {
-  color: #202124;
+  color: var(--main-color);
   font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -30,7 +30,7 @@
 }
 
 .App-login a {
-  color: #1a73e8;
+  color: var(--main-color-primary);
   letter-spacing: .25px;
   text-decoration: none;
   font-weight: 500;
@@ -54,10 +54,11 @@
 }
 
 .App-login-input {
+  background: var(--main-bg-color);
   width: 100%;
   border-radius: 4px;
   border: 1px solid #dadce0;
-  color: #202124;
+  color: var(--main-color);;
   font-size: 16px;
   margin: 10px 0;
   padding: 15px;
@@ -65,14 +66,14 @@
 }
 
 .App-login-input:focus {
-  border-color: #1a73e8;
-  box-shadow: 0 0 0 1px #1a73e8;
+  border-color: var(--main-color-primary);
+  box-shadow: 0 0 0 1px var(--main-color-primary);
   outline: none;
 }
 
 .App-login-input:focus + .App-login-label,
 .App-login-control.placeholder .App-login-label {
-  background: #fff;
+  background: var(--main-bg-color);
   top: 0;
   transform: scale(.75) translateX(-35px);
   height: 20px;
@@ -111,7 +112,7 @@
 }
 
 .App-login .btn.primary {
-  background: #1a73e8;
+  background: var(--main-color-primary);
   color: #fff;
   float: right;
 }
