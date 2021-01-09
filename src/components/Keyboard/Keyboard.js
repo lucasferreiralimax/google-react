@@ -1,10 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import './Keyboard.css';
 
 function Keyboard({ store, dispatch }) {
+  const [translateY, setTranslateY] = useState(0)
+  const [translateX, setTranslateX] = useState(0)
+
+  let holding = null;
+  let onDraggingFunctionRef = null;
+
+  function onMouseDown(e) {
+    holding = true;
+    onDraggingFunctionRef = onMouseDragging();
+    document.addEventListener('mousemove', onDraggingFunctionRef);
+    document.addEventListener('mouseup', _onMouseUp);
+  }
+
+  function _onMouseUp(e) {
+    holding = false;
+    document.removeEventListener('mousemove', onDraggingFunctionRef);
+    document.removeEventListener('mouseup', _onMouseUp);
+  }
+
+  function onMouseDragging() {
+    return (e) => {
+      if (holding) {
+        if((e.clientY - 20) > 2 && e.clientY < (window.innerHeight - 220)) {
+          setTranslateY(`${e.clientY - 20}px`)
+        }
+        if((e.clientX - 250) > 2 && e.clientX < window.innerWidth - 290) {
+          setTranslateX(`${e.clientX - 250}px`)
+        }
+      }
+    }
+  }
+
   return (
-    <section className={ `App-keyboard${store.keyboard ? ' active' : '' }`}>
+    <section className={ `App-keyboard${store.keyboard ? ' active' : '' }`} style={{ transform: `translate(${translateX}, ${translateY})` }} onMouseDown={onMouseDown}>
       <h1>português brasileiro</h1>
       <button className="exit" type="button" onClick={() => dispatch({type: 'TOGGLE_KEYBOARD'})}><i className="icon icon-exit">X</i></button>
       <div className="App-keyboard-content">
