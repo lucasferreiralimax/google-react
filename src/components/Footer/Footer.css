@@ -25,3 +25,9 @@
 .App-footer a:hover {
   color: var(--main-color-secondary);
 }
+
+@media (max-height: 600px) {
+  .App-footer {
+    position: relative;
+  }
+}

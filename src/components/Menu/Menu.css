@@ -13,6 +13,7 @@
   border-right: 1px solid rgba(var(--main-color-rgb), .2);
   color: rgba(0,0,0,.54);
   width: calc(80% - 20px);
+  min-width: 250px;
   padding: 30px;
   box-sizing: border-box;
   position: fixed;
