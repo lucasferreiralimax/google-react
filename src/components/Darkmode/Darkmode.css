@@ -1,4 +1,9 @@
 .darkmode {
+  cursor: pointer;
+  width: 100%;
+}
+
+.darkmode div {
   padding: 1em;
   display: flex;
   width: 100%;
@@ -6,10 +11,11 @@
   justify-content: space-between;
   user-select: none;
   box-sizing: border-box;
-  cursor: pointer;
 }
 
 .darkmode.footer {
   width: auto;
   margin-bottom: 1em;
+  background: transparent;
+  border: 0;
 }
