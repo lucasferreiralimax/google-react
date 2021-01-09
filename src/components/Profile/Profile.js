@@ -1,13 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Profile.css';
 import foto from '../../sinatra.jpg';
 
 function Profile() {
   const [show, setShow] = useState(false)
   const profile = () => setShow(!show)
+  const wrapperRef = useRef(null)
+
+  useEffect(() => {
+    /**
+     * Clicked on outside of element
+     */
+    function handleClickOutside(event) {
+        if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+          setShow(false)
+        }
+    }
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside)
+    };
+  });
 
   return (
-    <section className="App-profile">
+    <section className="App-profile" ref={wrapperRef}>
       <h1 onClick={profile}>
         2L
         <img src={foto} className="App-profile-foto" alt="Foto" width="40" />
