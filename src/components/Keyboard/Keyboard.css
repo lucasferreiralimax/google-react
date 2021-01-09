@@ -53,6 +53,7 @@
   line-height: 0;
   display: block;
   filter: invert(var(--main-invert));
+  pointer-events: none;
 }
 
 .App-keyboard .icon-exit {
@@ -101,26 +102,32 @@
   max-height: 50px;
   color: var(--main-color);
   background-color: var(--main-bg-color);
-  background-image: linear-gradient(to top,rgba(var(--main-color-rgb),0.2),rgba(var(--main-color-rgb),0.1));
+  background-image: linear-gradient(to top, rgba(var(--main-color-rgb),0.2), rgba(var(--main-color-rgb),0.1));
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   cursor: pointer;
 }
 
+.App-keyboard .key.hidden {
+  pointer-events: none;
+  font-size: 0;
+}
+
 .App-keyboard .key:hover {
   border-color: rgba(var(--main-color-rgb),0.3);
   color: var(--main-color);
   background-color: var(--main-bg-color);
-  background-image: linear-gradient(to top,rgba(var(--main-color-rgb),0.2),rgba(var(--main-color-rgb),0.1));
+  background-image: linear-gradient(to top, rgba(var(--main-color-rgb),0.2), rgba(var(--main-color-rgb),0.1));
   box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
 
-.App-keyboard .key:active,
-.App-keyboard .key:focus {
+.App-keyboard .key.active,
+.App-keyboard .key:active {
   border-color: rgba(var(--main-color-rgb),0.3);
   color: var(--main-color);
   background-color: var(--main-bg-color);
-  background-image: linear-gradient(to top,rgba(var(--main-color-rgb),0.2),rgba(var(--main-color-rgb),0.1));
-  box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
+  background-image: linear-gradient(to top, rgba(var(--main-color-rgb),0.2), rgba(var(--main-color-rgb),0.1));
+  box-shadow: inset 0px 1px 2px rgba(0,0,0,0.4);
+  filter: invert(1) brightness(2);
 }
