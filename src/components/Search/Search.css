@@ -79,3 +79,7 @@
   border: 1px solid #c6c6c6;
   color: #222;
 }
+
+@media only screen and (max-width: 900px) {
+  .App-search .btn.keyboard { display: none; }
+}
