@@ -14,12 +14,14 @@ function Darkmode({ type, store, dispatch }) {
       document.documentElement.style.setProperty('--main-color-primary', '#1a73e8');
       document.documentElement.style.setProperty('--main-color-secondary', 'green');
       document.documentElement.style.setProperty('--main-bg-color', '#fff');
+      document.documentElement.style.setProperty('--main-invert', '0');
     } else {
       document.documentElement.style.setProperty('--main-color', '#fff');
       document.documentElement.style.setProperty('--main-color-rgb', '255,255,255');
       document.documentElement.style.setProperty('--main-color-primary', '#1a73e8');
       document.documentElement.style.setProperty('--main-color-secondary', 'green');
       document.documentElement.style.setProperty('--main-bg-color', '#333');
+      document.documentElement.style.setProperty('--main-invert', '1');
     }
 
   }, [store.darkmode])

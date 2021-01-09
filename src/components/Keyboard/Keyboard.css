@@ -2,9 +2,8 @@
   height: auto;
   padding: 10px;
   margin: 10px;
-  background-color: white;
-  border: 1px solid #b8b8b8;
-  border: 1px solid rgba(0,0,0,0.3);
+  background-color: var(--main-bg-color);
+  border: 1px solid rgba(var(--main-color-rgb),0.3);
   z-index: 2147483644;
   font-family: arial,sans-serif;
   font-size: 14px;
@@ -35,6 +34,7 @@
 
 .App-keyboard .exit {
   border: 0;
+  background-color: var(--main-bg-color);
   padding: 5px;
   position: absolute;
   top: 5px;
@@ -51,6 +51,7 @@
   font-size: 0;
   line-height: 0;
   display: block;
+  filter: invert(var(--main-invert));
 }
 
 .App-keyboard .icon-exit {
@@ -86,8 +87,7 @@
 }
 
 .App-keyboard .key {
-  border: 1px solid #dcdcdc;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(var(--main-color-rgb),0.1);
   min-width: 29px;
   height: 29px;
   margin: 2px;
@@ -98,9 +98,9 @@
   max-width: 500px;
   min-height: 0px;
   max-height: 50px;
-  color: #444;
-  background-color: #f5f5f5;
-  background-image: linear-gradient(to top,#f5f5f5,#f1f1f1);
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  background-image: linear-gradient(to top,rgba(var(--main-color-rgb),0.2),rgba(var(--main-color-rgb),0.1));
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -108,18 +108,18 @@
 }
 
 .App-keyboard .key:hover {
-  border-color: #c6c6c6;
-  color: #222;
-  background-color: #f8f8f8;
-  background-image: linear-gradient(to top,#f8f8f8,#f1f1f1);
+  border-color: rgba(var(--main-color-rgb),0.3);
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  background-image: linear-gradient(to top,rgba(var(--main-color-rgb),0.2),rgba(var(--main-color-rgb),0.1));
   box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
 
 .App-keyboard .key:active,
 .App-keyboard .key:focus {
-  border-color: #c6c6c6;
-  color: #333;
-  background-color: #f6f6f6;
-  background-image: linear-gradient(to top,#f6f6f6,#f1f1f1);
+  border-color: rgba(var(--main-color-rgb),0.3);
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  background-image: linear-gradient(to top,rgba(var(--main-color-rgb),0.2),rgba(var(--main-color-rgb),0.1));
   box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
 }
