@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="App-footer">
       <Darkmode type="footer" />
-      <a href="http://lucasferreiralimax-dev.web.app"><strong>Brasil - @lucasferreiralimax</strong></a>
+      <a href="https://github.com/lucasferreiralimax"><strong>Github<br/>@lucasferreiralimax</strong></a>
     </footer>
   );
 }
