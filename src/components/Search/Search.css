@@ -21,7 +21,7 @@
   opacity: 0.45;
 }
 
-.App-search input {
+.App-search-input {
   border-radius: 100px;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -35,12 +35,12 @@
   white-space: pre;
 }
 
-.App-search input:hover {
+.App-search-input:hover {
   box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
   border-color: rgba(223,225,229,0);
 }
 
-.App-search input:focus {
+.App-search-input:focus {
   box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
   border-color: rgba(223,225,229,0);
 }
