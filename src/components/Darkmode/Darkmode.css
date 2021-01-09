@@ -1,6 +1,10 @@
 .darkmode {
   cursor: pointer;
   width: 100%;
+  background: rgba(var(--main-color-rgb), .2);
+  border: 1px solid rgba(var(--main-color-rgb), .2);
+  border-radius: 6px;
+  color: var(--main-color);
 }
 
 .darkmode div {
@@ -14,8 +18,17 @@
 }
 
 .darkmode.footer {
+  background: rgba(var(--main-color-rgb), .1);
   width: auto;
   margin-bottom: 1em;
-  background: transparent;
   border: 0;
+  outline: none;
+}
+
+.darkmode.footer:focus {
+  background: rgba(var(--main-color-rgb), .2);
+}
+
+.darkmode.footer:focus svg {
+  filter: invert(1);
 }

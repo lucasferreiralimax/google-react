@@ -10,7 +10,7 @@
 
 .App-nav-content {
   background: var(--main-bg-color);
-  border-right: 1px solid #e4e4e4;
+  border-right: 1px solid rgba(var(--main-color-rgb), .2);
   color: rgba(0,0,0,.54);
   width: calc(80% - 20px);
   padding: 30px;
@@ -26,9 +26,9 @@
 
 .App-nav-item {
   background: var(--main-bg-color);
-  border: 1px solid #ccc;
+  border: 1px solid rgba(var(--main-color-rgb), .2);
   border-bottom: 0;
-  color: var(--main-color);;
+  color: var(--main-color);
   width: 100%;
   padding: 1rem;
   cursor: pointer;
@@ -53,7 +53,7 @@
 
 .App-nav-item:last-of-type {
   border-radius: 0 0 5px 5px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(var(--main-color-rgb), .2);
 }
 
 .App-nav-item:hover {
@@ -81,7 +81,7 @@
 .App-nav-menu::after {
   content: '';
   display: block;
-  background: #eee;
+  background: rgba(var(--main-color-rgb), .2);
   width: 50px;
   height: 50px;
   border-radius: 100%;

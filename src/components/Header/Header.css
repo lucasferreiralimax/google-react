@@ -30,7 +30,7 @@
 .App-header a {
   font-size: 12px;
   font-weight: normal;
-  color: #777;
+  color: var(--main-color);
   position: absolute;
   top: 5px;
   transform: translateX(100px);
@@ -41,7 +41,7 @@
 }
 
 .App-header a:hover {
-  color: #61dafb;
+  color: var(--main-color-primary);
 }
 
 .App-logo {
