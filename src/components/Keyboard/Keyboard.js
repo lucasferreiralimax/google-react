@@ -9,8 +9,8 @@ import { insertAtCaretEvent } from './insertAtCaretEvent'
 import { backspaceEvent } from './backspaceEvent'
 
 function Keyboard({ store, dispatch }) {
-  const [translateY, setTranslateY] = useState(0)
-  const [translateX, setTranslateX] = useState(0)
+  const [translateY, setTranslateY] = useState('0px')
+  const [translateX, setTranslateX] = useState(`${(window.innerWidth / 2) - 250}px`)
   const [capslock, setCapslock] = useState(false)
   const [shift, setShift] = useState(false)
   const [ctrlalt, setCtrlalt] = useState(false)
