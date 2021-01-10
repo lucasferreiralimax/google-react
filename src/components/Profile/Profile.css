@@ -21,9 +21,12 @@
   font-family: 'Ultra', serif;
   font-size: 2.5em;
   font-weight: normal;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .App-profile h1:hover img,
+.App-profile h1:focus img,
 .App-profile h1:active img {
   box-shadow: 0 0 0 1px #fff, 0 0 10px 4px #aaa;
   transform: scale(1.1);
@@ -86,6 +89,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .App-profile__content button:active {

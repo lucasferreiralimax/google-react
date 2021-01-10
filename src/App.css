@@ -1,5 +1,5 @@
 .App {
-  min-height: calc(100vh - 82px);
+  min-height: calc(100vh - 155px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,6 +8,15 @@
 
 .App-link {
   color: #61dafb;
+}
+
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--main-color-primary);
 }
 
 .btn {
@@ -26,12 +35,21 @@
   text-align: center;
   cursor: pointer;
   user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: .3s all;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  box-shadow: 0 0 3px 2px rgba(var(--main-color-rgb), .2);
 }
 
 
 @media (max-height: 600px) {
   .App {
     min-height: 600px;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 }

@@ -36,10 +36,14 @@
   text-decoration: none;
   display: block;
   box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: .3s all;
 }
 
 .App-nav-item svg {
   float: left;
+  transition: .3s all;
 }
 
 .App-nav-item span {
@@ -57,8 +61,16 @@
   border-bottom: 1px solid rgba(var(--main-color-rgb), .2);
 }
 
-.App-nav-item:hover {
+.App-nav-item:hover,
+.App-nav-item:focus,
+.App-nav-item:active {
   background: rgba(255,255,255,.2);
+  color: var(--main-color);
+}
+
+.App-nav-item:hover svg,
+.App-nav-item:active svg {
+  transform: scale(1.2);
 }
 
 .App-nav-menu {
@@ -70,9 +82,12 @@
   border: 0;
   background: transparent;
   user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .App-nav-menu:hover::after,
+.App-nav-menu:focus::after,
 .App-nav-menu:active::after {
   transform: scale(1) translate(-50%, -50%);
   opacity: 1;

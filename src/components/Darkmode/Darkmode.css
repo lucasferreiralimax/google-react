@@ -1,10 +1,11 @@
 .darkmode {
   cursor: pointer;
-  width: 100%;
   background: rgba(var(--main-color-rgb), .1);
   border: 1px solid rgba(var(--main-color-rgb), .2);
   border-radius: 6px;
   color: var(--main-color);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .darkmode div {
@@ -20,7 +21,6 @@
 .darkmode.footer {
   background: rgba(var(--main-color-rgb), .1);
   width: auto;
-  margin-bottom: 1em;
   border: 0;
   outline: none;
   transition: .3s all;

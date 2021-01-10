@@ -63,6 +63,16 @@
   justify-content: center;
 }
 
+.App-search .btn.keyboard:hover,
+.App-search .btn.voice:hover,
+.App-search .btn.keyboard:focus,
+.App-search .btn.voice:focus,
+.App-search .btn.keyboard:active,
+.App-search .btn.voice:active {
+  transform: scale(1.2);
+  box-shadow: none;
+}
+
 .App-search .btn.keyboard {
   right: 45px;
 }
