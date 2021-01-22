@@ -4,7 +4,7 @@ import logo from '../../logo.svg';
 
 function Header() {
   return (
-    <header className="App-header">
+    <header data-testid="app-header" className="App-header">
       <h1>Deus é Maior</h1>
       <img src={logo} className="App-logo" alt="logo Google" width="272" />
       <h2><a href="https://pt-br.reactjs.org">React</a></h2>

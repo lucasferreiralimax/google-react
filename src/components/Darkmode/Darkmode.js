@@ -27,7 +27,7 @@ function Darkmode({ type, store, dispatch }) {
   }, [store.darkmode])
 
   return (
-    <button type="button" onClick={() => dispatch({type: 'TOGGLE_DARKMODE'})} className={ `darkmode${store.darkmode ? ' active' : '' }${type ? ' footer' : '' }`}>
+    <button data-testid="app-darkmode" type="button" onClick={() => dispatch({type: 'TOGGLE_DARKMODE'})} className={ `darkmode${store.darkmode ? ' active' : '' }${type ? ' footer' : '' }`}>
         { type ?
           <svg width="34" height="34" viewBox="-5 -5 34 34" fill="var(--main-color)">
             { store.darkmode ?

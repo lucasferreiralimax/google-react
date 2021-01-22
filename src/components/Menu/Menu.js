@@ -25,7 +25,7 @@ function Menu() {
   })
 
   return (
-    <nav className={ `App-nav${nav ? ' active' : '' }`}>
+    <nav data-testid="app-nav" className={ `App-nav${nav ? ' active' : '' }`}>
       <button type="button" className="App-nav-menu" onClick={menu}>
         <svg fill="var(--main-color)" height="25px" viewBox="0 0 25 25" width="25px" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 0h24v24H0z" fill="none"></path>

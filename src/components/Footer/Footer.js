@@ -5,7 +5,7 @@ import Darkmode from '../Darkmode/Darkmode';
 
 function Footer() {
   return (
-    <footer className="App-footer">
+    <footer data-testid="app-footer" className="App-footer">
       <div>
         <h2 className="brasil">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" widht="26px" height="26px">

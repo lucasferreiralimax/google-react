@@ -25,14 +25,14 @@ function Profile() {
   });
 
   return (
-    <section className="App-profile" ref={wrapperRef}>
+    <section data-testid="app-profile" className="App-profile" ref={wrapperRef}>
       <h1 onClick={profile}>
         2L
-        <img src={foto} className="App-profile-foto" alt="Foto" width="40" />
+        <img src={foto} className="App-profile-foto" alt="Foto Frank Sinatra" width="40" />
       </h1>
       <div className={ `App-profile__content${show ? ' show' : '' }`}>
         <a href="https://github.com/lucasferreiralimax" target="_blank">
-          <img src={foto} className="App-profile-foto big" alt="Foto" />
+          <img src={foto} className="App-profile-foto big" alt="Foto Frank Sinatra" />
         </a>
         <h1>Lucas Lima</h1>
         <h2>lucasferreiralimax@gmail.com</h2>

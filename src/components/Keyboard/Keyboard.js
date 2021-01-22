@@ -108,7 +108,7 @@ function Keyboard({ store, dispatch }) {
     return null
   } else {
     return (
-      <section className={ `App-keyboard${store.keyboard ? ' active' : '' }`} onMouseDown={onMouseDown} ref={wrapperRef} style={{ transform: `translate(${translateX}, ${translateY})` }}>
+      <section data-testid="app-keyboard" className={ `App-keyboard${store.keyboard ? ' active' : '' }`} onMouseDown={onMouseDown} ref={wrapperRef} style={{ transform: `translate(${translateX}, ${translateY})` }}>
         <h1>português brasileiro</h1>
         <button className="exit" type="button" onClick={() => dispatch({type: 'TOGGLE_KEYBOARD'})}><i className="icon icon-exit">X</i></button>
         <div className="App-keyboard-content" onClick={onKeyVirtualEvents.bind(this)}>

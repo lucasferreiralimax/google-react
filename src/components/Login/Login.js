@@ -24,7 +24,7 @@ function Login() {
   }
 
   return (
-    <form className="App-login">
+    <form data-testid="app-login" className="App-login">
       <img src={logo} className="App-logo" alt="logo Google" width="75" />
       <h1>Fazer login</h1>
       <p>Use sua Conta do Google</p>
