@@ -11,11 +11,13 @@ describe("Should render <Search/>", () => {
       <Search />
     </Provider>
     );
+    const buttonClean = screen.getByRole('button', { name: 'Limpar' })
     const buttonKeyboard = screen.getByRole('button', { name: 'Icone Teclado Teclado virtual' })
     const buttonVoice = screen.getByRole('button', { name: 'Buscar por voz' })
     const buttonSearch = screen.getByRole('button', { name: 'Pesquisa Google' })
     const buttonLucky = screen.getByRole('button', { name: 'Estou com sorte' })
 
+    expect(buttonClean).toHaveTextContent('Limpar');
     expect(buttonKeyboard).toHaveTextContent('Teclado virtual');
     expect(buttonVoice).toHaveTextContent('Buscar por voz');
     expect(buttonSearch).toHaveTextContent('Pesquisa Google');

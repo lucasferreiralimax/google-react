@@ -8,6 +8,7 @@
 }
 
 .App-search .icon-search,
+.App-search .icon-clean,
 .App-search .icon-voice {
   width: 25px;
 }
@@ -46,6 +47,7 @@
 }
 
 .App-search .btn.keyboard,
+.App-search .btn.clean,
 .App-search .btn.voice {
   background: transparent;
   border: 0;
@@ -64,13 +66,27 @@
 }
 
 .App-search .btn.keyboard:hover,
+.App-search .btn.clean:hover,
 .App-search .btn.voice:hover,
 .App-search .btn.keyboard:focus,
+.App-search .btn.clean:focus,
 .App-search .btn.voice:focus,
 .App-search .btn.keyboard:active,
+.App-search .btn.clean:active,
 .App-search .btn.voice:active {
   transform: scale(1.2);
   box-shadow: none;
+}
+
+.App-search .btn.clean {
+  right: 80px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.App-search .btn.clean.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .App-search .btn.keyboard {
