@@ -14,15 +14,11 @@ function Search({ store, dispatch }, props) {
   const searchClean = () => { setName('') };
 
   const searchEnter = (e) => {
-    if (e.key === "Enter") {
-      twoL();
-    }
+    if (e.key === "Enter") twoL();
   };
 
   const twoL = () => {
-    if(name) {
-      window.location = `https://www.google.com.br/search?&q=${name}`;
-    }
+    if(name) window.location = `https://www.google.com.br/search?&q=${name}`;
     alert('2L em alto mar');
   };
 
