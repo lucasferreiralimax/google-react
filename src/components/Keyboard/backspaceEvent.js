@@ -1,3 +1,5 @@
+import store from '../../store';
+
 export function backspaceEvent(element) {
   if (document.selection) {
     element.focus();
@@ -7,12 +9,13 @@ export function backspaceEvent(element) {
   } else if (element.selectionStart || element.selectionStart === 0) {
     let startPos = element.selectionStart;
     let endPos = element.selectionEnd;
-    element.value = element.value.substring(0, startPos-1) + element.value.substring(endPos, element.value.length);
+    let textValue = element.value.substring(0, startPos-1) + element.value.substring(endPos, element.value.length);
+    store.dispatch({type: 'SEARCH_VALUE', payload: textValue})
     element.focus();
     element.selectionStart = startPos;
     element.selectionEnd = --endPos;
   } else {
-    --element.value;
+    store.dispatch({type: 'SEARCH_VALUE', payload: --element.value})
     element.focus();
   }
 }
