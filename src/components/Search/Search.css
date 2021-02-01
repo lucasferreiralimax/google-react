@@ -81,9 +81,7 @@
   box-shadow: none;
 }
 
-.App-search .btn.clean svg {
-  transition: .3s all;
-}
+.App-search .btn.clean svg { transition: .3s all; }
 
 .App-search .btn.clean:hover svg,
 .App-search .btn.clean:focus svg,
@@ -111,13 +109,8 @@
   pointer-events: all;
 }
 
-.App-search .btn.keyboard {
-  right: 45px;
-}
-
-.App-search .btn.voice {
-  right: 5px;
-}
+.App-search .btn.keyboard { right: 45px; }
+.App-search .btn.voice { right: 5px; }
 
 .App-search .btn.search:hover,
 .App-search .btn.lucky:hover {
@@ -130,4 +123,5 @@
 
 @media only screen and (max-width: 900px) {
   .App-search .btn.keyboard { display: none; }
+  .App-search .btn.clean { right: 45px; }
 }
