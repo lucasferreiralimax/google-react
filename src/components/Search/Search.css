@@ -66,22 +66,44 @@
 }
 
 .App-search .btn.keyboard:hover,
-.App-search .btn.clean:hover,
 .App-search .btn.voice:hover,
 .App-search .btn.keyboard:focus,
-.App-search .btn.clean:focus,
 .App-search .btn.voice:focus,
 .App-search .btn.keyboard:active,
-.App-search .btn.clean:active,
 .App-search .btn.voice:active {
   transform: scale(1.2);
   box-shadow: none;
 }
 
+.App-search .btn.clean:hover,
+.App-search .btn.clean:focus,
+.App-search .btn.clean:active {
+  box-shadow: none;
+}
+
+.App-search .btn.clean svg {
+  transition: .3s all;
+}
+
+.App-search .btn.clean:hover svg,
+.App-search .btn.clean:focus svg,
+.App-search .btn.clean:active svg {
+  transform: scale(1.2);
+}
+
 .App-search .btn.clean {
-  right: 80px;
+  right: 90px;
   opacity: 0;
   pointer-events: none;
+}
+
+.App-search .btn.clean::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 60%;
+  transform: translateX(10px);
+  background: rgba(0,0,0,.2);
 }
 
 .App-search .btn.clean.active {
