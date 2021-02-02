@@ -40,8 +40,8 @@ function Login() {
           </div>
         }
       </div>
-      <a href="https://github.com/lucasferreiralimax">Esqueceu seu e-mail?</a>
-      <p>Não está no seu computador? Use o modo visitante para fazer login com privacidade. <a href="https://github.com/lucasferreiralimax">Saiba mais</a></p>
+      <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noopener">Esqueceu seu e-mail?</a>
+      <p>Não está no seu computador? Use o modo visitante para fazer login com privacidade. <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noopener">Saiba mais</a></p>
       <button type="button" className="App-login-new btn">Criar conta</button>
       <button type="button" className="App-login-next btn primary" onClick={submitNext}>Próxima</button>
     </form>

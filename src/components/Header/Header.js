@@ -7,7 +7,7 @@ function Header() {
     <header data-testid="app-header" className="App-header">
       <h1>Deus é Maior</h1>
       <img src={logo} className="App-logo" alt="logo Google" width="272" />
-      <h2><a href="https://pt-br.reactjs.org">React</a></h2>
+      <h2><a href="https://pt-br.reactjs.org" target="_blank" rel="noopener">React</a></h2>
     </header>
   );
 }

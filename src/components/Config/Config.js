@@ -8,7 +8,7 @@ function Config() {
       <h1>Configurações</h1>
       <Darkmode />
       <br/>
-      <a href="https://github.com/lucasferreiralimax/google-react" target="_blank">Estude o código fonte desse projeto no Github acesse aqui.</a>
+      <a href="https://github.com/lucasferreiralimax/google-react" target="_blank" rel="noopener">Estude o código fonte desse projeto no Github acesse aqui.</a>
     </form>
   );
 }
