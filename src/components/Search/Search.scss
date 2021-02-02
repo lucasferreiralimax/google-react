@@ -5,21 +5,19 @@
   max-width: 582px;
   margin: 0 auto;
   text-align: center;
-}
-
-.App-search .icon-search,
-.App-search .icon-clean,
-.App-search .icon-voice {
-  width: 25px;
-}
-
-.App-search .icon-search {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 20px;
-  pointer-events: none;
-  opacity: 0.45;
+  .icon-search,
+  .icon-clean,
+  .icon-voice {
+    width: 25px;
+  }
+  .icon-search {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 20px;
+    pointer-events: none;
+    opacity: 0.45;
+  }
 }
 
 .App-search-input {
@@ -34,94 +32,77 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: pre;
+  &:hover {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+  }
+  &:focus {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+  }
 }
 
-.App-search-input:hover {
-  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
-  border-color: rgba(223,225,229,0);
-}
-
-.App-search-input:focus {
-  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
-  border-color: rgba(223,225,229,0);
-}
-
-.App-search .btn.keyboard,
-.App-search .btn.clean,
-.App-search .btn.voice {
-  background: transparent;
-  border: 0;
-  font-size: 0;
-  position: absolute;
-  cursor: pointer;
-  width: 47px;
-  height: 47px;
-  top: 0;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.App-search .btn.keyboard:hover,
-.App-search .btn.voice:hover,
-.App-search .btn.keyboard:focus,
-.App-search .btn.voice:focus,
-.App-search .btn.keyboard:active,
-.App-search .btn.voice:active {
-  transform: scale(1.2);
-  box-shadow: none;
-}
-
-.App-search .btn.clean:hover,
-.App-search .btn.clean:focus,
-.App-search .btn.clean:active {
-  box-shadow: none;
-}
-
-.App-search .btn.clean svg { transition: .3s all; }
-
-.App-search .btn.clean:hover svg,
-.App-search .btn.clean:focus svg,
-.App-search .btn.clean:active svg {
-  transform: scale(1.2);
-}
-
-.App-search .btn.clean {
-  right: 90px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.App-search .btn.clean::after {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 60%;
-  transform: translateX(10px);
-  background: rgba(0,0,0,.2);
-}
-
-.App-search .btn.clean.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.App-search .btn.keyboard { right: 45px; }
-.App-search .btn.voice { right: 5px; }
-
-.App-search .btn.search:hover,
-.App-search .btn.lucky:hover {
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-  background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
-  background-color: #f8f8f8;
-  border: 1px solid #c6c6c6;
-  color: #222;
+.App-search .btn {
+  &.keyboard, &.clean, &.voice {
+    background: transparent;
+    border: 0;
+    font-size: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 47px;
+    height: 47px;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &.keyboard { right: 45px; }
+  &.voice { right: 5px; }
+  &.keyboard, &.voice {
+    &:hover, &:focus, &:active {
+      transform: scale(1.2);
+      box-shadow: none;
+    }
+  }
+  &.clean {
+    right: 90px;
+    opacity: 0;
+    pointer-events: none;
+    &:hover, &:focus, &:active {
+      box-shadow: none;
+    }
+    &:hover svg, &:focus svg, &:active svg {
+      transform: scale(1.2);
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 60%;
+      transform: translateX(10px);
+      background: rgba(0,0,0,.2);
+    }
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    svg { transition: .3s all; }
+  }
+  &.search, &.lucky {
+    &:hover {
+      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+      background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+      background-color: #f8f8f8;
+      border: 1px solid #c6c6c6;
+      color: #222;
+    }
+  }
 }
 
 @media only screen and (max-width: 900px) {
   .App-search .btn.keyboard { display: none; }
-  .App-search .btn.clean { right: 45px; }
+  .App-search .btn.clean { right: 50px; }
 }

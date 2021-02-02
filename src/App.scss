@@ -4,19 +4,18 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media (max-height: 600px) {
+    min-height: 600px;
+    justify-content: space-between;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
+.App-link { color: #61dafb; }
 
 a {
   color: var(--main-color);
   text-decoration: none;
-}
-
-a:hover {
-  color: var(--main-color-primary);
+  &:hover { color: var(--main-color-primary); }
 }
 
 .btn {
@@ -38,18 +37,9 @@ a:hover {
   outline: none;
   -webkit-tap-highlight-color: transparent;
   transition: .3s all;
-}
-
-.btn:hover,
-.btn:focus,
-.btn:active {
-  box-shadow: 0 0 3px 2px rgba(var(--main-color-rgb), .2);
-}
-
-
-@media (max-height: 600px) {
-  .App {
-    min-height: 600px;
-    justify-content: space-between;
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0 0 3px 2px rgba(var(--main-color-rgb), .2);
   }
 }

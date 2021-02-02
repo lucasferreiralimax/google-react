@@ -8,40 +8,34 @@
   color: #000;
   margin-bottom: 30px;
   position: relative;
-}
-
-.App-header:hover h1 {
-  opacity: 1;
-  transform: scale(1) translateY(-150px);
-}
-
-.App-header h1 {
-  color: #fff;
-  text-shadow: 0 0 150px #000, 0 0 100px #ff0, 0 0 50px #0f0, 0 -2px 15px #0f0;
-  user-select: none;
-  cursor: none;
-  opacity: 0;
-  transform: scale(0) translateY(0);
-  transform-origin: bottom;
-  transition: .5s opacity, 1s transform;
-  position: absolute;
-}
-
-.App-header a {
-  font-size: 12px;
-  font-weight: normal;
-  color: var(--main-color);
-  position: absolute;
-  top: 5px;
-  transform: translateX(100px);
-  padding: 0;
-  margin: 0;
-  user-select: none;
-  text-decoration: none;
-}
-
-.App-header a:hover {
-  color: var(--main-color-primary);
+  &:hover h1 {
+    opacity: 1;
+    transform: scale(1) translateY(-150px);
+  }
+  h1 {
+    color: #fff;
+    text-shadow: 0 0 150px #000, 0 0 100px #ff0, 0 0 50px #0f0, 0 -2px 15px #0f0;
+    user-select: none;
+    cursor: none;
+    opacity: 0;
+    transform: scale(0) translateY(0);
+    transform-origin: bottom;
+    transition: .5s opacity, 1s transform;
+    position: absolute;
+  }
+  a {
+    font-size: 12px;
+    font-weight: normal;
+    color: var(--main-color);
+    position: absolute;
+    top: 5px;
+    transform: translateX(100px);
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    text-decoration: none;
+    &:hover { color: var(--main-color-primary); }
+  }
 }
 
 .App-logo {
@@ -55,13 +49,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.App-logo:hover {
-  transform: scale(1.05);
-}
-
-.App-logo:active,
-.App-logo:focus {
-  transform: scale(0.94);
+  &:hover { transform: scale(1.05); }
+  &:active,
+  &:focus {
+    transform: scale(0.94);
+  }
 }

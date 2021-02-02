@@ -1,14 +1,10 @@
 .App-config {
   text-align: center;
   padding: 1em;
-}
-
-.App-config input {
-  cursor: pointer;
-}
-
-.App-config a {
-  padding: 1em;
-  box-sizing: border-box;
-  display: inline-block;
+  input { cursor: pointer; }
+  a {
+    padding: 1em;
+    box-sizing: border-box;
+    display: inline-block;
+  }
 }

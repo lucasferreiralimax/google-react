@@ -16,124 +16,111 @@
   z-index: 99;
   top: 0;
   left: 0;
-}
-
-.App-keyboard.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.App-keyboard .move-zone {
-  cursor: move;
-  font-size: 0;
-  height: 33px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.App-keyboard .exit {
-  border: 0;
-  background-color: var(--main-bg-color);
-  padding: 5px;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  cursor: pointer;
-}
-
-.App-keyboard .icon {
-  margin: 0px;
-  background: url(//ssl.gstatic.com/inputtools/images/ita_sprite2.png) no-repeat;
-  height: 14px;
-  width: 14px;
-  opacity: .4;
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  filter: Invert(var(--main-invert));
-  pointer-events: none;
-}
-
-.App-keyboard .icon-exit {
-  background-position: -668px -18px;
-}
-
-.App-keyboard .icon-backspace,
-.App-keyboard .icon-capslock,
-.App-keyboard .icon-shitf {
-  width: 22px;
-  height: 17px;
-  margin: 0 auto;
-  opacity: .667;
-}
-
-.App-keyboard .icon-backspace {
-  background-position: -714px -16px;
-}
-
-.App-keyboard .icon-capslock {
-  background-position: -614px -66px;
-}
-
-.App-keyboard .icon-shitf {
-  background-position: -814px -16px;
-}
-.App-keyboard h1 {
-  font-size: 14px;
-  font-family: arial, sans-serif;
-  font-weight: normal;
-  line-height: 25px;
-  margin: 0;
-  cursor: move;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 5px 10px;
-}
-
-.App-keyboard .key {
-  border: 1px solid rgba(var(--main-color-rgb),0.1);
-  min-width: 29px;
-  height: 29px;
-  margin: 2px;
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  padding: 1px;
-  max-width: 500px;
-  min-height: 0px;
-  max-height: 50px;
-  color: var(--main-color);
-  background-color: var(--main-bg-color);
-  background-image: linear-gradient(to top, rgba(var(--main-color-rgb),0.2), rgba(var(--main-color-rgb),0.1));
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  cursor: pointer;
-}
-
-.App-keyboard .key.hidden {
-  pointer-events: none;
-  font-size: 0;
-}
-
-.App-keyboard .key:hover {
-  border-color: rgba(var(--main-color-rgb),0.3);
-  color: var(--main-color);
-  background-color: var(--main-bg-color);
-  background-image: linear-gradient(to top, rgba(var(--main-color-rgb),0.2), rgba(var(--main-color-rgb),0.1));
-  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-}
-
-.App-keyboard .key.active,
-.App-keyboard .key:active {
-  border-color: rgba(var(--main-color-rgb),0.3);
-  color: var(--main-color);
-  background-color: var(--main-bg-color);
-  background-image: linear-gradient(to top, rgba(var(--main-color-rgb),0.2), rgba(var(--main-color-rgb),0.1));
-  box-shadow: inset 0px 1px 2px rgba(0,0,0,0.4);
-  filter: invert(1) brightness(2);
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .move-zone {
+    cursor: move;
+    font-size: 0;
+    height: 33px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .exit {
+    border: 0;
+    background-color: var(--main-bg-color);
+    padding: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+  .icon {
+    margin: 0px;
+    background: url(//ssl.gstatic.com/inputtools/images/ita_sprite2.png) no-repeat;
+    height: 14px;
+    width: 14px;
+    opacity: .4;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    filter: Invert(var(--main-invert));
+    pointer-events: none;
+  }
+  .icon-exit {
+    background-position: -668px -18px;
+  }
+  .icon-backspace,
+  .icon-capslock,
+  .icon-shitf {
+    width: 22px;
+    height: 17px;
+    margin: 0 auto;
+    opacity: .667;
+  }
+  .icon-backspace {
+    background-position: -714px -16px;
+  }
+  .icon-capslock {
+    background-position: -614px -66px;
+  }
+  .icon-shitf {
+    background-position: -814px -16px;
+  }
+  h1 {
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    font-weight: normal;
+    line-height: 25px;
+    margin: 0;
+    cursor: move;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 10px;
+  }
+  .key {
+    border: 1px solid rgba(var(--main-color-rgb),0.1);
+    min-width: 29px;
+    height: 29px;
+    margin: 2px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    padding: 1px;
+    max-width: 500px;
+    min-height: 0px;
+    max-height: 50px;
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
+    background-image: linear-gradient(to top, rgba(var(--main-color-rgb),0.2), rgba(var(--main-color-rgb),0.1));
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    cursor: pointer;
+    &.hidden {
+      pointer-events: none;
+      font-size: 0;
+    }
+    &:hover {
+      border-color: rgba(var(--main-color-rgb),0.3);
+      color: var(--main-color);
+      background-color: var(--main-bg-color);
+      background-image: linear-gradient(to top, rgba(var(--main-color-rgb),0.2), rgba(var(--main-color-rgb),0.1));
+      box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+    }
+    &.active,
+    &:active {
+      border-color: rgba(var(--main-color-rgb),0.3);
+      color: var(--main-color);
+      background-color: var(--main-bg-color);
+      background-image: linear-gradient(to top, rgba(var(--main-color-rgb),0.2), rgba(var(--main-color-rgb),0.1));
+      box-shadow: inset 0px 1px 2px rgba(0,0,0,0.4);
+      filter: invert(1) brightness(2);
+    }
+  }
 }
