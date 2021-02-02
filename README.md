@@ -32,6 +32,16 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Deployment
+> Se tiver problemas [abra uma nova issue aqui](https://github.com/lucasferreiralimax/google-react/issues/new)
 
-### `npm run build`
+### :performing_arts: Com quem você pode conversar sobre o projeto?
+#### Who can you talk to about the project?
+#### ¿Con quién puedes hablar sobre el proyecto?
+#### С кем вы можете поговорить о проекте?
+#### 誰がプロジェクトについて話すことができますか？
+#### À qui pouvez-vous parler du projet?
+#### Projeyle ilgili kim konuşabilirsin?
+#### 你能谈谈这个项目吗？
+
+* :ghost: @lucasferreiralimax
+* :email: lucasferreiralimax@gmail.com
