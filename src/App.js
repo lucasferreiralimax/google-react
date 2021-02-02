@@ -13,7 +13,7 @@ import Profile from './components/Profile/Profile';
 import Search from './components/Search/Search';
 import Keyboard from './components/Keyboard/Keyboard';
 import Footer from './components/Footer/Footer';
-import './App.css';
+import './App.scss';
 import store from './store';
 
 function App() {

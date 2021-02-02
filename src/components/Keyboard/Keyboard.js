@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { connect } from 'react-redux';
-import './Keyboard.css';
+import './Keyboard.scss';
 
 import { shiftEvent } from './shiftEvent'
 import { ctrlAltEvent } from './ctrlAltEvent'

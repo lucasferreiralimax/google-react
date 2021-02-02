@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './Profile.css';
+import './Profile.scss';
 import foto from '../../sinatra.jpg';
 
 function Profile() {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import './Menu.css';
+import './Menu.scss';
 
 function Menu() {
   const [nav, setNav] = useState(false)

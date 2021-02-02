@@ -52,7 +52,7 @@
   font-size: 0;
   line-height: 0;
   display: block;
-  filter: invert(var(--main-invert));
+  filter: Invert(var(--main-invert));
   pointer-events: none;
 }
 

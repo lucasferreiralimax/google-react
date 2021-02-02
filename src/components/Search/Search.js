@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import keyboard from '../../keyboard.png';
-import './Search.css';
+import './Search.scss';
 
 function Search({ store, dispatch }) {
 

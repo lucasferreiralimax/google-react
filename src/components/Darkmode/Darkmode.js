@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import './Darkmode.css';
+import './Darkmode.scss';
 
 
 function Darkmode({ type, store, dispatch }) {

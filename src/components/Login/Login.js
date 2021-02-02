@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './Login.css';
+import './Login.scss';
 import logo from '../../logo.svg';
 
 function Login() {

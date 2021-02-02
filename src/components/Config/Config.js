@@ -1,5 +1,5 @@
 import React from 'react';
-import './Config.css';
+import './Config.scss';
 import Darkmode from '../Darkmode/Darkmode';
 
 function Config() {

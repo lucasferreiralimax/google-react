@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import './Footer.css';
+import './Footer.scss';
 import Darkmode from '../Darkmode/Darkmode';
 
 function Footer() {
