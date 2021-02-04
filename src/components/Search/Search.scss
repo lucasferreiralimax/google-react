@@ -25,7 +25,7 @@
   border-radius: 100px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  padding: 15px 85px 15px 40px;
+  padding: 15px 130px 15px 40px;
   width: 100%;
   margin-bottom: 20px;
   transition: .2s all;
@@ -106,4 +106,5 @@
 @media only screen and (max-width: 900px) {
   .App-search .btn.keyboard { display: none; }
   .App-search .btn.clean { right: 50px; }
+  .App-search-input { padding: 15px 80px 15px 40px; }
 }
