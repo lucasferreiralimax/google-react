@@ -105,6 +105,7 @@
     &.hidden {
       pointer-events: none;
       font-size: 0;
+      opacity: .5;
     }
     &:hover {
       border-color: rgba(var(--main-color-rgb),0.3);
