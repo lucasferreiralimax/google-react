@@ -31,16 +31,16 @@ function Profile() {
         <img src={foto} className="App-profile-foto" alt="Foto Frank Sinatra" width="40" />
       </h1>
       <div className={ `App-profile__content${show ? ' show' : '' }`}>
-        <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noopener">
+        <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener">
           <img src={foto} className="App-profile-foto big" alt="Foto Frank Sinatra" />
         </a>
         <h1>Lucas Lima</h1>
         <h2>lucasferreiralimax@gmail.com</h2>
         <button type="button">Gerenciar sua Conta do Google</button>
         <div className="divider">
-          <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noopener">Política de Privacidade</a>
+          <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener">Política de Privacidade</a>
           <div className="bullet">•</div>
-          <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noopener">Termos de Serviço</a>
+          <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener">Termos de Serviço</a>
         </div>
       </div>
     </section>

@@ -21,36 +21,29 @@ function Keyboard({ store, dispatch }) {
   let holding = null;
   let onDraggingFunctionRef = null;
 
-  const updateWidthAndHeight = () => {
-
-    setWidth(window.innerWidth)
-    setHeight(window.innerHeight)
-    setTranslateX(`${(width / 2) - 250}px`)
-
-    if(width > 900 && height < 900) {
-      setTranslateY(`${height - 250}px`)
-    }
-
-    if(width > 900 && height > 400) {
-      setShow(true)
-    } else {
-      setShow(false)
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener("resize", updateWidthAndHeight)
-    return () => window.removeEventListener("resize", updateWidthAndHeight)
-  })
+    const updateWidthAndHeight = () => {
+      setWidth(window.innerWidth)
+      setHeight(window.innerHeight)
+      setTranslateX(`${(width / 2) - 250}px`)
+      setShow((width > 900 && height > 400))
+      if(width > 900 && height < 900) { setTranslateY(`${height - 250}px`) }
+    };
 
-  function onMouseDown(e) {
+    window.addEventListener("resize", updateWidthAndHeight)
+    return () => {
+      window.removeEventListener("resize", updateWidthAndHeight)
+    }
+  }, [height, width, setWidth, setHeight, setTranslateX, setShow])
+
+  function onMouseDown() {
     holding = true;
     onDraggingFunctionRef = onMouseDragging();
     document.addEventListener('mousemove', onDraggingFunctionRef);
     document.addEventListener('mouseup', _onMouseUp);
   }
 
-  function _onMouseUp(e) {
+  function _onMouseUp() {
     holding = false;
     wrapperRef.current.style.removeProperty('cursor')
     document.removeEventListener('mousemove', onDraggingFunctionRef);

@@ -22,7 +22,7 @@ function Footer() {
       </div>
       <hr className="divider" />
       <div>
-        <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noopener"><strong>@lucasferreiralimax</strong></a>
+        <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener"><strong>@lucasferreiralimax</strong></a>
         <Link to="/config">Configurações</Link>
       </div>
     </footer>
