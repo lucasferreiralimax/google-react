@@ -22,6 +22,7 @@ function Search({ store, dispatch }) {
   };
 
   const searchVoice = () => {
+    document.querySelector('body').style.overflow = 'hidden';
     dispatch({type: 'TOGGLE_VOICE'})
   };
 

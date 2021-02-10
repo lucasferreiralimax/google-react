@@ -11,6 +11,7 @@ function Voice({ store, dispatch }) {
      */
     function handleClickOutside(event) {
         if (buttoVoiceRef.current && !buttoVoiceRef.current.contains(event.target)) {
+          document.querySelector('body').removeAttribute('style');
           dispatch({type: 'SET_VOICE', payload: false})
         }
     }
