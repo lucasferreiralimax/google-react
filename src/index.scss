@@ -18,3 +18,30 @@ body {
 }
 
 code { font-family: monospace; }
+
+.exit {
+  border: 0;
+  background-color: var(--main-bg-color);
+  padding: 5px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.icon {
+  margin: 0px;
+  background: url(//ssl.gstatic.com/inputtools/images/ita_sprite2.png) no-repeat;
+  height: 14px;
+  width: 14px;
+  opacity: .4;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  filter: Invert(var(--main-invert));
+  pointer-events: none;
+}
+
+.icon-exit {
+  background-position: -668px -18px;
+}

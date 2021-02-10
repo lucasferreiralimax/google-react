@@ -4,7 +4,6 @@
   margin: 10px;
   background-color: var(--main-bg-color);
   border: 1px solid rgba(var(--main-color-rgb),0.3);
-  z-index: 2147483644;
   font-family: arial,sans-serif;
   font-size: 14px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
@@ -28,30 +27,6 @@
     top: 0;
     left: 0;
     right: 0;
-  }
-  .exit {
-    border: 0;
-    background-color: var(--main-bg-color);
-    padding: 5px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-  }
-  .icon {
-    margin: 0px;
-    background: url(//ssl.gstatic.com/inputtools/images/ita_sprite2.png) no-repeat;
-    height: 14px;
-    width: 14px;
-    opacity: .4;
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    filter: Invert(var(--main-invert));
-    pointer-events: none;
-  }
-  .icon-exit {
-    background-position: -668px -18px;
   }
   .icon-backspace,
   .icon-capslock,
