@@ -12,6 +12,7 @@ import Config from './components/Config/Config';
 import Profile from './components/Profile/Profile';
 import Search from './components/Search/Search';
 import Keyboard from './components/Keyboard/Keyboard';
+import Voice from './components/Voice/Voice';
 import Footer from './components/Footer/Footer';
 import './App.scss';
 import store from './store';
@@ -34,6 +35,7 @@ function App() {
               <Header />
               <Search />
               <Keyboard />
+              <Voice />
             </Route>
           </Switch>
           <Footer />
