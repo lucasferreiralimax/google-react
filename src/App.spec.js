@@ -29,6 +29,11 @@ describe("Should render <App/>", () => {
     expect(screen.getByTestId('app-keyboard')).toBeInTheDocument();
   });
 
+  it('renders app-voice', () => {
+    renderWithRouter(<App />, { route: '/' })
+    expect(screen.getByTestId('app-voice')).toBeInTheDocument();
+  });
+
   it('renders app-search', () => {
     renderWithRouter(<App />, { route: '/' })
     expect(screen.getByTestId('app-search')).toBeInTheDocument();
