@@ -65,30 +65,37 @@ function Keyboard({ store, dispatch }) {
     }
   }
 
+  function handleCapslock() {
+    setCapslock(!capslock)
+    capslockEvent(!capslock)
+  }
+
+  function handleShift() {
+    setShift(!shift)
+    shiftEvent(!shift)
+  }
+
+  function handleCtrlAlt() {
+    setCtrlalt(!ctrlalt)
+    ctrlAltEvent(!ctrlalt)
+  }
+
   function onKeyVirtualEvents(event) {
     event.persist()
     if(event.target.classList.contains('key')) {
       let input = document.querySelector('.App-search-input')
 
       switch(event.target.textContent) {
+        case 'capslock':
+        case 'shift 1':
+        case 'shift 2':
+        case 'Ctrl+Alt':
+          break;
         case 'backspace':
           backspaceEvent(input)
           break;
         case 'whitespace':
           insertAtCaretEvent(input, ' ')
-          break;
-        case 'capslock':
-          setCapslock(!capslock)
-          capslockEvent(!capslock)
-          break;
-        case 'Ctrl+Alt':
-          setCtrlalt(!ctrlalt)
-          ctrlAltEvent(!ctrlalt)
-          break;
-        case 'shift 1':
-        case 'shift 2':
-          setShift(!shift)
-          shiftEvent(!shift)
           break;
         default:
           insertAtCaretEvent(input, event.target.textContent)
@@ -136,7 +143,7 @@ function Keyboard({ store, dispatch }) {
             <button className="key" type="button">[</button>
           </div>
           <div className="row">
-            <button className={ `key${capslock ? ' active' : '' }`} type="button" style={{width: '53.75px'}}><i className="icon icon-capslock">capslock</i></button>
+            <button data-testid="capslock" className={ `key${capslock ? ' active' : '' }`} onClick={handleCapslock} type="button" style={{width: '53.75px'}}><i className="icon icon-capslock">capslock</i></button>
             <button className="key" type="button">a</button>
             <button className="key" type="button">s</button>
             <button className="key" type="button">d</button>
@@ -151,7 +158,7 @@ function Keyboard({ store, dispatch }) {
             <button className="key" type="button">]</button>
           </div>
           <div className="row">
-            <button className={ `key${shift ? ' active' : '' }`} type="button" style={{width: '37.25px'}}><i className="icon icon-shitf">shift 1</i></button>
+            <button data-testid="shift_1" className={ `key${shift ? ' active' : '' }`} onClick={handleShift} type="button" style={{width: '37.25px'}}><i className="icon icon-shitf">shift 1</i></button>
             <button className="key" type="button">\</button>
             <button className="key" type="button">z</button>
             <button className="key" type="button">x</button>
@@ -163,12 +170,12 @@ function Keyboard({ store, dispatch }) {
             <button className="key" type="button">,</button>
             <button className="key" type="button">.</button>
             <button className="key" type="button">;</button>
-            <button className={ `key${shift ? ' active' : '' }`} type="button" style={{width: '86.75px'}}><i className="icon icon-shitf">shift 2</i></button>
+            <button data-testid="shift_2" className={ `key${shift ? ' active' : '' }`} onClick={handleShift} type="button" style={{width: '86.75px'}}><i className="icon icon-shitf">shift 2</i></button>
           </div>
           <div className="row">
-            <button className={ `key${ctrlalt ? ' active' : '' }`} type="button" style={{width: '95px'}}>Ctrl+Alt</button>
+            <button data-testid="ctrl_alt_1" className={ `key${ctrlalt ? ' active' : '' }`} onClick={handleCtrlAlt} type="button" style={{width: '95px'}}>Ctrl+Alt</button>
             <button className="key" type="button" style={{width: '293px', fontSize: '0px'}}>whitespace</button>
-            <button className={ `key${ctrlalt ? ' active' : '' }`} type="button" style={{width: '95px'}}>Ctrl+Alt</button>
+            <button data-testid="ctrl_alt_2" className={ `key${ctrlalt ? ' active' : '' }`} onClick={handleCtrlAlt} type="button" style={{width: '95px'}}>Ctrl+Alt</button>
           </div>
         </div>
       </section>
