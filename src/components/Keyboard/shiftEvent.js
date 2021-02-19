@@ -10,8 +10,8 @@ export function shiftEvent(status) {
       case 'shift 2':
         break;
       case '\'':
-      case '\'\'':
-        status ? key.textContent = '\'\'' : key.textContent = '\''
+      case '"':
+        status ? key.textContent = '"' : key.textContent = '\''
         break;
       case '1':
       case '!':
