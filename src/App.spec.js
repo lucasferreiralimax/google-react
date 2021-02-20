@@ -53,6 +53,7 @@ describe("Should render routes <App/>", () => {
 
   it('renders app-config', () => {
     renderWithRouter(<App />, { route: '/config' })
+    expect(screen.getByTestId('app-profile')).toBeInTheDocument();
     expect(screen.getByTestId('app-config')).toBeInTheDocument();
   });
 });

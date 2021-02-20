@@ -28,6 +28,7 @@ function App() {
               <Login />
             </Route>
             <Route path="/config">
+              <Profile />
               <Config />
             </Route>
             <Route path="/">
