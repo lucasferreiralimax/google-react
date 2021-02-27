@@ -15,6 +15,7 @@
   align-items: center;
   flex-direction: column;
   z-index: 9;
+  transition: .5s background;
   @media (max-height: 600px) {
     position: relative;
   }
