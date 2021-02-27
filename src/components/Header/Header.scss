@@ -12,6 +12,10 @@
     opacity: 1;
     transform: scale(1) translateY(-150px);
   }
+  h1, h2 {
+    position: absolute;
+    top: 0;
+  }
   h1 {
     color: #fff;
     text-shadow: 0 0 150px #000, 0 0 100px #ff0, 0 0 50px #0f0, 0 -2px 15px #0f0;
@@ -23,6 +27,7 @@
     transition: .5s opacity, 1s transform;
     position: absolute;
   }
+  h2 { transform: translateY(-35px); }
   a {
     font-size: 12px;
     font-weight: normal;
@@ -43,7 +48,7 @@
   transition: .3s transform;
   outline: none;
   user-select: none;
-  filter: Grayscale(var(--main-invert));
+  filter: var(--logo-filter);
   &:hover { transform: scale(1.05); }
   &:active,
   &:focus {
