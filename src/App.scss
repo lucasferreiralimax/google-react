@@ -19,27 +19,26 @@ a {
 }
 
 .btn {
-  background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
-  background-color: #f2f2f2;
-  border: 1px solid #f2f2f2;
+  -webkit-tap-highlight-color: transparent;
+  background-color: rgba(var(--main-color-rgb),0.05);
+  border: 0;
   border-radius: 4px;
-  color: #5F6368;
+  color: var(--main-color);
+  cursor: pointer;
   font-family: arial,sans-serif;
   font-size: 14px;
-  margin: 11px 4px;
-  padding: 0 16px;
-  line-height: 27px;
   height: 36px;
+  line-height: 27px;
+  margin: 11px 4px;
   min-width: 54px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
   outline: none;
-  -webkit-tap-highlight-color: transparent;
+  padding: 0 16px;
+  text-align: center;
   transition: .3s all;
+  user-select: none;
   &:hover,
   &:focus,
   &:active {
-    box-shadow: 0 0 3px 2px rgba(var(--main-color-rgb), .2);
+    box-shadow: 0 0 0 1px rgba(var(--main-color-rgb),0.3);
   }
 }
