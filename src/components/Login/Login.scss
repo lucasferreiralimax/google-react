@@ -55,9 +55,9 @@
 
 %placeholder-label {
   background: var(--main-bg-color-primary);
-  top: 0;
+  top: 5px;
   transform: scale(.75) translateX(-35px);
-  height: 20px;
+  height: 25px;
   padding: 0 4px;
 }
 
@@ -76,16 +76,17 @@
 }
 
 .App-login-label {
+  bottom: 17px;
   box-sizing: border-box;
   color: #80868b;
+  display: inline-block;
   font-size: 16px;
   font-weight: 400;
-  position: absolute;
-  top: 22px;
   left: 18px;
-  bottom: 17px;
+  line-height: 0;
+  position: absolute;
+  top: 36px;
   transition: .15s top, .15s transform;
-  display: inline-block;
 }
 
 .App-login-input {
