@@ -17,14 +17,17 @@
     width: 20px;
     pointer-events: none;
     opacity: 0.45;
+    fill: var(--main-color);
   }
   .label-search { font-size: 0; }
 }
 
 .App-search-input {
+  background: var(--input-bg-color);
   border-radius: 100px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(var(--main-color-rgb),0.1);
   box-sizing: border-box;
+  color: var(--main-color);
   padding: 15px 130px 15px 40px;
   width: 100%;
   margin-bottom: 20px;
@@ -33,13 +36,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: pre;
-  &:hover {
-    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
-    border-color: rgba(223,225,229,0);
-  }
+  &:hover,
   &:focus {
-    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    background: var(--input-bg-color-hover);
     border-color: rgba(223,225,229,0);
+    box-shadow: 0 1px 6px 0 var(--input-drop-shadow);
   }
 }
 
@@ -84,7 +85,7 @@
       width: 1px;
       height: 60%;
       transform: translateX(10px);
-      background: rgba(0,0,0,.2);
+      background: rgba(var(--main-color-rgb),.2);
     }
     &.active {
       opacity: 1;

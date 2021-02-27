@@ -16,6 +16,9 @@ function Darkmode({ type, store, dispatch }) {
       document.documentElement.style.setProperty('--main-bg-color-primary', '#fff');
       document.documentElement.style.setProperty('--main-bg-color-secondary', '#f2f2f2');
       document.documentElement.style.setProperty('--main-invert', '0');
+      document.documentElement.style.setProperty('--input-bg-color', '#fff');
+      document.documentElement.style.setProperty('--input-bg-color-hover', '#fff');
+      document.documentElement.style.setProperty('--input-drop-shadow', '#20212447');
     } else {
       document.documentElement.style.setProperty('--main-color', '#fff');
       document.documentElement.style.setProperty('--main-color-rgb', '255,255,255');
@@ -24,6 +27,9 @@ function Darkmode({ type, store, dispatch }) {
       document.documentElement.style.setProperty('--main-bg-color-primary', '#202124');
       document.documentElement.style.setProperty('--main-bg-color-secondary', '#171717');
       document.documentElement.style.setProperty('--main-invert', '1');
+      document.documentElement.style.setProperty('--input-bg-color', '#202124');
+      document.documentElement.style.setProperty('--input-bg-color-hover', '#303134');
+      document.documentElement.style.setProperty('--input-drop-shadow', '#171717');
     }
 
   }, [store.darkmode])
