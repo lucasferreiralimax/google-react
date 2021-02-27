@@ -42,12 +42,6 @@
   cursor: pointer;
   transition: .3s transform;
   outline: none;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   &:hover { transform: scale(1.05); }
   &:active,
