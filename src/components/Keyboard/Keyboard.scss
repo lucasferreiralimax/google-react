@@ -71,11 +71,8 @@
     min-height: 0px;
     max-height: 50px;
     color: var(--main-color);
-    background-color: var(--main-bg-color-primary);
-    background-image: linear-gradient(to top, rgba(var(--main-color-rgb),0.2), rgba(var(--main-color-rgb),0.1));
+    background-color: rgba(var(--main-color-rgb), .05);
     border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
     cursor: pointer;
     &.hidden {
       pointer-events: none;
@@ -85,8 +82,7 @@
     &:hover {
       border-color: rgba(var(--main-color-rgb),0.3);
       color: var(--main-color);
-      background-color: var(--main-bg-color-primary);
-      background-image: linear-gradient(to top, rgba(var(--main-color-rgb),0.2), rgba(var(--main-color-rgb),0.1));
+      background-color: rgba(var(--main-color-rgb), .02);
       box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
     }
     &.active,
