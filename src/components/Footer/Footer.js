@@ -8,7 +8,7 @@ function Footer() {
     <footer data-testid="app-footer" className="App-footer">
       <div>
         <h2 className="brasil">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" widht="26px" height="26px">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" widht="25px" height="25px">
             <circle cx="256" cy="256" r="256" fill="#6da544"/>
             <path fill="#ffda44" d="M256 100.174L467.478 256 256 411.826 44.522 256z"/>
             <circle cx="256" cy="256" r="89.043" fill="#f0f0f0"/>

@@ -4,6 +4,10 @@
   border: 1px solid rgba(var(--main-color-rgb), .2);
   border-radius: 6px;
   color: var(--main-color);
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   outline: none;
   -webkit-tap-highlight-color: transparent;
   &.footer {

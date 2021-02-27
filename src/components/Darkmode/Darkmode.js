@@ -37,7 +37,7 @@ function Darkmode({ type, store, dispatch }) {
   return (
     <button data-testid="app-darkmode" type="button" onClick={() => dispatch({type: 'TOGGLE_DARKMODE'})} className={ `darkmode${store.darkmode ? ' active' : '' }${type ? ' footer' : '' }`} aria-label="Toggle darkmode">
         { type ?
-          <svg width="34" height="34" viewBox="-5 -5 34 34" fill="var(--main-color)">
+          <svg width="25px" height="25px" viewBox="-5 -5 34 34" fill="var(--main-color)">
             { store.darkmode ?
               <path d="M12 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zM4.929 4.929a1 1 0 011.414 0l.707.707A1 1 0 115.636 7.05l-.707-.707a1 1 0 010-1.414zm14.142 0a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM7 12a5 5 0 1110 0 5 5 0 01-10 0zm-5 0a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm17 0a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1zm-2.05 4.95a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zm-11.314 0a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707zM12 19a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z"/>
               :
