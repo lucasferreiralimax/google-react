@@ -43,6 +43,7 @@
   transition: .3s transform;
   outline: none;
   user-select: none;
+  filter: Grayscale(var(--main-invert));
   &:hover { transform: scale(1.05); }
   &:active,
   &:focus {
