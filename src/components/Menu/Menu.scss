@@ -8,7 +8,7 @@
 }
 
 .App-nav-content {
-  background: var(--main-bg-color);
+  background: var(--main-bg-color-primary);
   border-right: 1px solid rgba(var(--main-color-rgb), .2);
   color: rgba(0,0,0,.54);
   width: calc(80% - 20px);
@@ -28,7 +28,7 @@
 }
 
 .App-nav-item {
-  background: var(--main-bg-color);
+  background: var(--main-bg-color-primary);
   border: 1px solid rgba(var(--main-color-rgb), .2);
   border-bottom: 0;
   color: var(--main-color);

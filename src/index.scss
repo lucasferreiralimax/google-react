@@ -3,7 +3,7 @@
   --main-color-rgb: '255,255,255';
   --main-color-primary: '#1a73e8';
   --main-color-secondar: 'green';
-  --main-bg-color: '#333';
+  --main-bg-color-primary: '#333';
   --main-invert: '1';
 }
 
@@ -12,7 +12,7 @@ body {
   font-family: Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--main-bg-color);
+  background: var(--main-bg-color-primary);
   color: var(--main-color);
   transition: .3s all;
 }
@@ -21,7 +21,7 @@ code { font-family: monospace; }
 
 .exit {
   border: 0;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-bg-color-primary);
   padding: 5px;
   position: absolute;
   top: 5px;

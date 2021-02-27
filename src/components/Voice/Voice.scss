@@ -1,6 +1,6 @@
 .App-voice {
   align-items: center;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-bg-color-primary);
   bottom: 0;
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
   display: flex;
@@ -40,7 +40,7 @@
 .btn-voice {
   --mic-volume-size: 150px;
   align-items: center;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-bg-color-primary);
   border-radius: 50%;
   border: 1px solid rgba(var(--main-color-rgb),0.3);
   cursor: pointer;
