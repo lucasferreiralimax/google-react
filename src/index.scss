@@ -8,40 +8,38 @@
 }
 
 body {
-  margin: 0;
-  font-family: Arial;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   background: var(--main-bg-color-primary);
   color: var(--main-color);
+  font-family: Arial;
+  margin: 0;
   transition: .3s all;
 }
 
 code { font-family: monospace; }
 
 .exit {
-  border: 0;
   background-color: var(--main-bg-color-primary);
+  border: 0;
+  cursor: pointer;
   padding: 5px;
   position: absolute;
-  top: 5px;
   right: 5px;
-  cursor: pointer;
+  top: 5px;
 }
 
 .icon {
-  margin: 0px;
   background: url(//ssl.gstatic.com/inputtools/images/ita_sprite2.png) no-repeat;
-  height: 14px;
-  width: 14px;
-  opacity: .4;
-  font-size: 0;
-  line-height: 0;
   display: block;
   filter: Invert(var(--main-invert));
+  font-size: 0;
+  height: 14px;
+  line-height: 0;
+  margin: 0px;
+  opacity: .4;
   pointer-events: none;
+  width: 14px;
 }
 
-.icon-exit {
-  background-position: -668px -18px;
-}
+.icon-exit { background-position: -668px -18px; }

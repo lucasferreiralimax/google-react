@@ -1,12 +1,12 @@
 .App {
-  min-height: calc(100vh - 96px);
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 96px);
   @media (max-height: 600px) {
-    min-height: 600px;
     justify-content: space-between;
+    min-height: 600px;
   }
 }
 
@@ -21,8 +21,8 @@ a {
 .btn {
   -webkit-tap-highlight-color: transparent;
   background-color: rgba(var(--main-color-rgb),0.05);
-  border: 0;
   border-radius: 4px;
+  border: 0;
   color: var(--main-color);
   cursor: pointer;
   font-family: arial,sans-serif;

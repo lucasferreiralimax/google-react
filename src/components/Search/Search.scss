@@ -1,23 +1,23 @@
 
 .App-search {
-  position: relative;
-  width: calc(100% - 50px);
-  max-width: 582px;
   margin: 0 auto;
+  max-width: 582px;
+  position: relative;
   text-align: center;
+  width: calc(100% - 50px);
   .icon-search,
   .icon-clean,
   .icon-voice {
     width: 25px;
   }
   .icon-search {
+    fill: var(--main-color);
+    left: 12px;
+    opacity: 0.45;
+    pointer-events: none;
     position: absolute;
     top: 12px;
-    left: 12px;
     width: 20px;
-    pointer-events: none;
-    opacity: 0.45;
-    fill: var(--main-color);
   }
   .label-search { font-size: 0; }
 }
@@ -28,14 +28,14 @@
   border: 1px solid rgba(var(--main-color-rgb),0.15);
   box-sizing: border-box;
   color: var(--main-color);
-  padding: 15px 130px 15px 40px;
-  width: 100%;
   margin-bottom: 20px;
-  transition: .2s all;
   outline: none;
   overflow: hidden;
+  padding: 15px 130px 15px 40px;
   text-overflow: ellipsis;
+  transition: .2s all;
   white-space: pre;
+  width: 100%;
   &:hover,
   &:focus {
     background: var(--input-bg-color-hover);
@@ -46,33 +46,33 @@
 
 .App-search .btn {
   &.keyboard, &.clean, &.voice {
+    align-items: center;
     background: transparent;
     border: 0;
-    font-size: 0;
-    position: absolute;
     cursor: pointer;
-    width: 47px;
+    display: flex;
+    font-size: 0;
     height: 47px;
-    top: 0;
-    padding: 0;
+    justify-content: center;
     margin: 0;
     min-width: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 47px;
   }
   &.keyboard { right: 45px; }
   &.voice { right: 5px; }
   &.keyboard, &.voice {
     &:hover, &:focus, &:active {
-      transform: scale(1.2);
       box-shadow: none;
+      transform: scale(1.2);
     }
   }
   &.clean {
-    right: 90px;
     opacity: 0;
     pointer-events: none;
+    right: 90px;
     &:hover, &:focus, &:active {
       box-shadow: none;
     }
@@ -80,12 +80,12 @@
       transform: scale(1.2);
     }
     &:after {
+      background: rgba(var(--main-color-rgb),.2);
       content: '';
       display: block;
-      width: 1px;
       height: 60%;
       transform: translateX(10px);
-      background: rgba(var(--main-color-rgb),.2);
+      width: 1px;
     }
     &.active {
       opacity: 1;
