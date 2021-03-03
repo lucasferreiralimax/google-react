@@ -2,8 +2,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: calc(100vh - 96px);
   justify-content: center;
-  min-height: calc(100vh - 96px);
   @media (max-height: 600px) {
     justify-content: space-between;
     min-height: 600px;

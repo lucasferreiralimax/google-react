@@ -2,18 +2,20 @@
 
 .App-login {
   border-radius: 8px;
-  border: 1px solid rgba(var(--main-color-rgb), .2);
   box-sizing: border-box;
-  height: auto;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100%;
   padding: 48px 40px 36px;
   position: relative;
   width: 100%;
   z-index: 1;
   @media (min-width: 601px) {
+    border: 1px solid rgba(var(--main-color-rgb), .2);
     max-width: 450px;
     min-height: 500px;
+  }
+  @media (max-height: 600px) {
+    border: 0;
   }
   h1 {
     color: var(--main-color);
