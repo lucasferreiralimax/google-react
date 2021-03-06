@@ -39,9 +39,10 @@
 .btn-voice {
   --mic-volume-size: 150px;
   align-items: center;
-  background-color: var(--main-bg-color-primary);
+  background-color: rgba(var(--main-color-rgb), .05);
   border-radius: 50%;
-  border: 1px solid rgba(var(--main-color-rgb),0.3);
+  border: 0;
+  box-shadow: 0 0 0 1px rgba(#fff, .6), 0 10px 20px rgba(var(--main-color-rgb), .1);
   cursor: pointer;
   display: flex;
   height: var(--mic-volume-size);
@@ -50,8 +51,24 @@
   outline: none;
   user-select: none;
   width: var(--mic-volume-size);
+  opacity: .5;
+  transition: .4s all;
+  &.active {
+    animation: 1s voice infinite alternate;
+    opacity: 1;
+    svg { fill: #ea4335; }
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
   svg {
     height: 50%;
     width: 50%;
+    fill: var(--main-color)
   }
+}
+
+@keyframes voice {
+  0%   { box-shadow: 0 0 0 1px rgba(#fff, .6), 0 10px 20px rgba(var(--main-color-rgb), .1), 0 0 10px rgba(var(--main-color-rgb), .1)}
+  100% { box-shadow: 0 0 0 1px rgba(#fff, .6), 0 10px 20px rgba(var(--main-color-rgb), .1), 0 0 0 30px rgba(var(--main-color-rgb), .1)}
 }
