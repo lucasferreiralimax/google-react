@@ -46,9 +46,9 @@ function Voice({ store, dispatch }) {
       recognition.interimResults = true;
 
       final_transcript = '';
-      recognition.start();
+      // recognition.start();
       ignore_onend = false;
-      document.querySelector('.App-voice p').textContent = 'Ative o microfone';
+      document.querySelector('.App-voice p').textContent = 'Clique no microfone';
 
       recognition.onstart = function() {
         recognizing = true;
@@ -96,8 +96,8 @@ function Voice({ store, dispatch }) {
         }
         if (final_transcript) {
           document.querySelector('body').removeAttribute('style');
-          dispatch({type: 'SEARCH_VALUE', payload: final_transcript})
-          dispatch({type: 'SET_VOICE', payload: false})
+          dispatch({type: 'SEARCH_VALUE', payload: final_transcript});
+          dispatch({type: 'SET_VOICE', payload: false});
           recognition.stop();
         }
         if (interim_transcript) {
