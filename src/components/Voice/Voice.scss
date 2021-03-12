@@ -25,6 +25,7 @@
       opacity: 1;
       transform: translateX(0);
     }
+    .btn-voice { transform: scale(1); }
   }
   p {
     font-size: 22px;
@@ -48,11 +49,12 @@
   height: var(--mic-volume-size);
   justify-content: center;
   margin-left: 20px;
+  opacity: .5;
   outline: none;
+  transition: .4s all;
+  transform: scale(0);
   user-select: none;
   width: var(--mic-volume-size);
-  opacity: .5;
-  transition: .4s all;
   &.active {
     animation: 1s voice infinite alternate;
     opacity: 1;
@@ -69,6 +71,6 @@
 }
 
 @keyframes voice {
-  0%   { box-shadow: 0 0 0 1px rgba(#fff, .6), 0 10px 20px rgba(var(--main-color-rgb), .1), 0 0 10px rgba(var(--main-color-rgb), .1)}
-  100% { box-shadow: 0 0 0 1px rgba(#fff, .6), 0 10px 20px rgba(var(--main-color-rgb), .1), 0 0 0 30px rgba(var(--main-color-rgb), .1)}
+  0%   { box-shadow: 0 0 0 1px rgba(#fff, .6), 0 10px 20px rgba(var(--main-color-rgb), .1), 0 0 10px rgba(var(--main-color-rgb), .1); }
+  100% { box-shadow: 0 0 0 1px rgba(#fff, .6), 0 10px 20px rgba(var(--main-color-rgb), .1), 0 0 0 30px rgba(var(--main-color-rgb), .1);}
 }
