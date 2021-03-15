@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import keyboard from '../../keyboard.png';
+import keyboard from '../../assets/keyboard.png';
 import './Search.scss';
 
 function Search({ store, dispatch }) {

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Profile.scss';
-import foto from '../../sinatra.jpg';
+import foto from '../../assets/sinatra.jpg';
 
 function Profile() {
   const [show, setShow] = useState(false)
