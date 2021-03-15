@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './Login.scss';
-import logo from '../../logo.svg';
+import logo from '../../assets/logo.svg';
 
 function Login() {
   const [input, setInput] = useState(false)
