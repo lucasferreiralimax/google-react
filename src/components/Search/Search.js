@@ -45,7 +45,7 @@ function Search({ store, dispatch }) {
         <span>Limpar</span>
       </button>
       <button type="button" className="btn keyboard" onClick={searchFocus}>
-        <img src={keyboard} className="icon-keyboard" alt="Icone Teclado" />
+        <img src={keyboard} className="icon-keyboard" alt="Icone Teclado" width="19" height="11" />
         <span>Teclado virtual</span>
       </button>
       <button type="button" className="btn voice" onClick={searchVoice}>
