@@ -3,18 +3,16 @@ import './Login.scss';
 import logo from '../../assets/logo.svg';
 
 function Login() {
-  const [input, setInput] = useState(false)
+  const [input, setInput] = useState('lucasferreiralimax@gmail.com')
   const [error, setError] = useState(false)
   const textInput = useRef(null);
 
   function handleChange(e) {
-    setInput(e.target.value ? true : false)
-    console.log(e.target.value);
+    setInput(e.target.value)
+    setError(e.target.value ? false : true)
   }
 
   function submitNext(e) {
-    console.log(e);
-    console.log(textInput.current.value);
     if(!textInput.current.value) {
       textInput.current.focus()
       setError(true)
@@ -29,7 +27,7 @@ function Login() {
       <h1>Fazer login</h1>
       <p>Use sua Conta do Google</p>
       <div className={ `App-login-control${input ? ' placeholder' : '' }${error ? ' error' : '' }`}>
-        <input id="user" type="text" className="App-login-input" onChange={handleChange} ref={textInput}/>
+        <input id="user" type="text" className="App-login-input" value={input} onChange={handleChange} ref={textInput}/>
         <label htmlFor="user" className="App-login-label">Email ou telefone</label>
         { error &&
           <div className="App-login-error">
