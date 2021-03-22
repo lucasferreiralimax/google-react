@@ -11,13 +11,9 @@ import Footer from './components/Footer/Footer';
 import './App.scss';
 import store from './store';
 
-const Header = lazy(() => import('./components/Header/Header'));
-const Login = lazy(() => import('./components/Login/Login'));
-const Config = lazy(() => import('./components/Config/Config'));
-const Profile = lazy(() => import('./components/Profile/Profile'));
-const Search = lazy(() => import('./components/Search/Search'));
-const Keyboard = lazy(() => import('./components/Keyboard/Keyboard'));
-const Voice = lazy(() => import('./components/Voice/Voice'));
+const Home = lazy(() => import('./views/Home/Home'));
+const Login = lazy(() => import('./views/Login/Login'));
+const Config = lazy(() => import('./views/Config/Config'));
 
 function App() {
   return (
@@ -31,15 +27,10 @@ function App() {
                 <Login />
               </Route>
               <Route path="/config">
-                <Profile />
                 <Config />
               </Route>
               <Route path="/">
-                <Profile />
-                <Header />
-                <Search />
-                <Keyboard />
-                <Voice />
+                <Home />
               </Route>
             </Switch>
             <Footer />
