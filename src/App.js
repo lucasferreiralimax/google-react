@@ -14,6 +14,7 @@ import store from './store';
 const Home = lazy(() => import('./views/Home/Home'));
 const Login = lazy(() => import('./views/Login/Login'));
 const Config = lazy(() => import('./views/Config/Config'));
+const Notfound = lazy(() => import('./views/Notfound/Notfound'));
 
 function App() {
   return (
@@ -29,8 +30,11 @@ function App() {
               <Route path="/config">
                 <Config />
               </Route>
-              <Route path="/">
+              <Route path="/" exact>
                 <Home />
+              </Route>
+              <Route path="*" exact>
+                <Notfound />
               </Route>
             </Switch>
             <Footer />
