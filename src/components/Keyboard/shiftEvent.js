@@ -1,14 +1,10 @@
+import noKeysChar from './utils';
+
 export function shiftEvent(status) {
   let keys = document.querySelectorAll('.App-keyboard-content .key')
   for(let key of keys) {
+    if(noKeysChar.includes(key.textContent)) continue
     switch(key.textContent) {
-      case 'backspace':
-      case 'whitespace':
-      case 'capslock':
-      case 'Ctrl+Alt':
-      case 'shift 1':
-      case 'shift 2':
-        break;
       case '\'':
       case '"':
         status ? key.textContent = '"' : key.textContent = '\''
@@ -94,11 +90,10 @@ export function shiftEvent(status) {
         status ? key.textContent = ':' : key.textContent = ';'
         break;
       default:
-        status ?
-          key.textContent = key.textContent.toUpperCase()
+        key.textContent = status ?
+          key.textContent.toUpperCase()
           :
-          key.textContent = key.textContent.toLowerCase()
-        break;
+          key.textContent.toLowerCase()
     }
   }
 }

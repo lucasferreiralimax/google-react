@@ -7,6 +7,7 @@ import { ctrlAltEvent } from './ctrlAltEvent'
 import { capslockEvent } from './capslockEvent'
 import { insertAtCaretEvent } from './insertAtCaretEvent'
 import { backspaceEvent } from './backspaceEvent'
+import { noKeysCharEvents } from './utils';
 
 function Keyboard({ store, dispatch }) {
   const [width, setWidth] = useState(window.innerWidth)
@@ -85,21 +86,18 @@ function Keyboard({ store, dispatch }) {
     if(event.target.classList.contains('key')) {
       let input = document.querySelector('.App-search-input')
 
-      switch(event.target.textContent) {
-        case 'capslock':
-        case 'shift 1':
-        case 'shift 2':
-        case 'Ctrl+Alt':
-          break;
-        case 'backspace':
-          backspaceEvent(input)
-          break;
-        case 'whitespace':
-          insertAtCaretEvent(input, ' ')
-          break;
-        default:
-          insertAtCaretEvent(input, event.target.textContent)
-          break;
+      if(!noKeysCharEvents.includes(event.target.textContent)) {
+        switch(event.target.textContent) {
+          case 'backspace':
+            backspaceEvent(input)
+            break;
+          case 'whitespace':
+            insertAtCaretEvent(input, ' ')
+            break;
+          default:
+            insertAtCaretEvent(input, event.target.textContent)
+            break;
+        }
       }
     }
   }
