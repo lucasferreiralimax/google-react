@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import Keyboard from './Keyboard';
+import noKeysChar from './utils'
 import { Provider } from 'react-redux';
 import store from '../../store';
 
@@ -10,21 +11,9 @@ let keys_mock_ctrl_alt = ['\'', '¹', '²', '³', '£', '¢', '¬', '7', '8', '9
 
 function keyMockCheck(keys, mock, config) {
   for(let [index, key] of keys.entries()) {
-    switch(key.textContent) {
-      case 'backspace':
-      case 'whitespace':
-      case 'capslock':
-      case 'Ctrl+Alt':
-      case 'shift 1':
-      case 'shift 2':
-        break;
-      default:
-        if(config.upper) {
-          expect(key.textContent).toBe(mock[index].toUpperCase())
-        } else {
-          expect(key.textContent).toBe(mock[index])
-        }
-        break;
+    if(!noKeysChar.includes(key.textContent)) {
+      if(!config.upper) return expect(key.textContent).toBe(mock[index])
+      expect(key.textContent).toBe(mock[index].toUpperCase())
     }
   }
 }
