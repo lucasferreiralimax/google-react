@@ -1,5 +1,7 @@
-## Live preview Project Online
-[g00gle-reactjs.web.app](https://g00gle-reactjs.web.app).
+# Google React
+
+## Screenshot
+![Google React Screenshot](https://raw.githubusercontent.com/lucasferreiralimax/google-react/master/src/assets/google-react.png)
 
 ## Available Scripts
 
@@ -25,8 +27,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Learn More
 
