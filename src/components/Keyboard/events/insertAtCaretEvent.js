@@ -1,8 +1,8 @@
-import store from '../../store';
+import store from '../../../store';
 
 // function insertAtCaret @Collin Anderson
 
-export function insertAtCaretEvent(element, text) {
+export default function insertAtCaretEvent(element, text) {
   if (document.selection) {
     element.focus();
     let sel = document.selection.createRange();

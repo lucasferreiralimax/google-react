@@ -2,11 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { connect } from 'react-redux';
 import './Keyboard.scss';
 
-import { shiftEvent } from './shiftEvent'
-import { ctrlAltEvent } from './ctrlAltEvent'
-import { capslockEvent } from './capslockEvent'
-import { insertAtCaretEvent } from './insertAtCaretEvent'
-import { backspaceEvent } from './backspaceEvent'
+import { shiftEvent, ctrlAltEvent, capslockEvent, backspaceEvent, insertAtCaretEvent } from './events';
 import { noKeysCharEvents } from './utils';
 
 function Keyboard({ store, dispatch }) {
@@ -84,20 +80,17 @@ function Keyboard({ store, dispatch }) {
   function onKeyVirtualEvents(event) {
     event.persist()
     if(event.target.classList.contains('key')) {
-      let input = document.querySelector('.App-search-input')
+      const input = document.querySelector('.App-search-input')
+      const typeKey = event.target.textContent
+      const keyEvents = {
+        backspace: el => backspaceEvent(el),
+        whitespace: el => insertAtCaretEvent(el, ' ')
+      }
 
-      if(!noKeysCharEvents.includes(event.target.textContent)) {
-        switch(event.target.textContent) {
-          case 'backspace':
-            backspaceEvent(input)
-            break;
-          case 'whitespace':
-            insertAtCaretEvent(input, ' ')
-            break;
-          default:
-            insertAtCaretEvent(input, event.target.textContent)
-            break;
-        }
+      if(!noKeysCharEvents.includes(typeKey)) {
+        return keyEvents[typeKey]
+          ? keyEvents[typeKey](input)
+          : insertAtCaretEvent(input, typeKey)
       }
     }
   }

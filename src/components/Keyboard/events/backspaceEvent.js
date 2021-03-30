@@ -1,6 +1,6 @@
-import store from '../../store';
+import store from '../../../store';
 
-export function backspaceEvent(element) {
+export default function backspaceEvent(element) {
   if (document.selection) {
     element.focus();
     let sel = document.selection.createRange();
