@@ -7,12 +7,12 @@ function Login() {
   const [error, setError] = useState(false)
   const textInput = useRef(null);
 
-  function handleChange(e) {
+  const handleChange = (e) => {
     setInput(e.target.value)
     setError(e.target.value ? false : true)
   }
 
-  function submitNext(e) {
+  const submitNext = () => {
     if(!textInput.current.value) {
       textInput.current.focus()
       setError(true)
