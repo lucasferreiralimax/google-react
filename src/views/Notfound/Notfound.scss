@@ -1,7 +1,3 @@
-.notfound {
-  background: url('../../assets/robot.png') 80% 30% no-repeat;
-}
-
 .App-notfound {
   box-sizing: border-box;
   margin: 0 auto;
@@ -21,10 +17,14 @@
   }
 }
 
-#logo {
+.logo {
   background: url('../../assets/logo.svg') no-repeat;
   background-size: contain;
   display: inline-block;
   height: 54px;
   width: 150px;
+}
+
+body.notfound {
+  background: url('../../assets/robot.png') 80% 30% no-repeat;
 }

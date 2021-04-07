@@ -12,7 +12,7 @@ function Notfound() {
   return (
     <section data-testid="app-notfound" className="App-notfound">
       <Link to="/">
-        <span id="logo" aria-label="Google"></span>
+        <span className="logo" aria-label="Google"></span>
       </Link>
       <p><b>404.</b> Esse é um erro.</p>
       <br/>

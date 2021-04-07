@@ -5,11 +5,13 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+
 import Loading from './components/Loading/Loading';
 import Menu from './components/Menu/Menu';
 import Footer from './components/Footer/Footer';
-import './App.scss';
 import store from './store';
+
+import './App.scss';
 
 const Home = lazy(() => import('./views/Home/Home'));
 const Login = lazy(() => import('./views/Login/Login'));

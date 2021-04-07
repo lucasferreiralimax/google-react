@@ -4,7 +4,6 @@ import Config from './Config';
 import { Provider } from 'react-redux';
 import store from '../../store';
 
-
 describe("Should render <Config/>", () => {
   it('renders valid link and text', () => {
     render(

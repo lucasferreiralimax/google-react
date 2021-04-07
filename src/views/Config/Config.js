@@ -1,7 +1,9 @@
 import React from 'react';
-import './Config.scss';
+
 import Darkmode from '../../components/Darkmode/Darkmode';
 import Profile from '../../components/Profile/Profile';
+
+import './Config.scss';
 
 function Config() {
   return (
