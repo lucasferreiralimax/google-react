@@ -5,6 +5,7 @@ import './Voice.scss';
 function Voice({ store, dispatch }) {
   const buttoVoiceRef = useRef(null);
   const [animation, setAnimation] = useState(false)
+  const [voiceText, setVoiceText] = useState('');
   const final_transcript = useRef('');
   const recognizing = useRef(false);
   const ignore_onend = useRef(null);
@@ -15,23 +16,20 @@ function Voice({ store, dispatch }) {
       console.log('atualize SpeechRecognition')
     } else {
       recognition.current = new window.webkitSpeechRecognition();
-
       recognition.current.continuous = false;
       recognition.current.interimResults = true;
-
       final_transcript.current = '';
       recognition.current.start();
       ignore_onend.current = false;
-      document.querySelector('.App-voice p').textContent = 'Ative o microfone';
+      setVoiceText('Ative o microfone');
 
-      recognition.current.onstart = function() {
+      recognition.current.onstart = () => {
         recognizing.current = true;
-        document.querySelector('.App-voice p').textContent = 'Fale agora';
+        setVoiceText('Fale agora');
         setAnimation(true);
-        console.log('onstart voice');
       };
 
-      recognition.current.onerror = function(event) {
+      recognition.current.onerror = (event) => {
         setAnimation(false);
         if (event.error === 'no-speech') {
           console.log('onerror voice no-speech');
@@ -42,21 +40,17 @@ function Voice({ store, dispatch }) {
           ignore_onend.current = true;
         }
         if (event.error === 'not-allowed') {
-          document.querySelector('.App-voice p').textContent = 'Ative o microfone';
+          setVoiceText('Ative o microfone');
           ignore_onend.current = true;
         }
       };
 
-      recognition.current.onend = function() {
+      recognition.current.onend = () => {
         recognizing.current = false;
-        if (ignore_onend) {
-          return;
-        }
-        if (!final_transcript.current) {
-          return;
-        }
+        if (ignore_onend) { return; }
+        if (!final_transcript.current) { return; }
         setAnimation(false);
-        document.querySelector('.App-voice p').textContent = 'Fale agora';
+        setVoiceText('Fale agora');
       };
 
       recognition.current.onresult = function(event) {
@@ -75,38 +69,13 @@ function Voice({ store, dispatch }) {
           recognition.current.stop();
         }
         if (interim_transcript) {
-          document.querySelector('.App-voice p').textContent = interim_transcript;
+          setVoiceText(interim_transcript);
         }
       };
     }
-  }, [recognizing, final_transcript, ignore_onend, dispatch]);
+  }, [setVoiceText, recognizing, final_transcript, ignore_onend, dispatch]);
 
-  useEffect(() => {
-    /**
-     * Voice search setup
-     */
-
-    if(store.voice) {
-      voiceSetup();
-    }
-  }, [store.voice, voiceSetup]);
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-        if (buttoVoiceRef.current && !buttoVoiceRef.current.contains(event.target)) {
-          document.querySelector('body').removeAttribute('style');
-          dispatch({type: 'SET_VOICE', payload: false})
-        }
-    }
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-        // Unbind the event listener on clean up
-        document.removeEventListener("mousedown", handleClickOutside)
-    };
-  });
-
-  function stopButton() {
+  const stopButton = () => {
     if (recognizing.current) {
       recognition.current.stop();
       setAnimation(false);
@@ -115,13 +84,39 @@ function Voice({ store, dispatch }) {
     }
   }
 
+  const handleClickOutside = (event) => {
+    if (
+      buttoVoiceRef.current &&
+      !buttoVoiceRef.current.contains(event.target)
+    ) {
+      document.querySelector('body').removeAttribute('style');
+      dispatch({type: 'SET_VOICE', payload: false})
+    }
+  }
+
+  useEffect(() => {
+    if(store.voice) { voiceSetup() }
+  }, [store.voice, voiceSetup]);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    };
+  });
+
   return (
     <section data-testid="app-voice" className={`App-voice${store.voice ? ' active' : '' }`}>
       {store.voice && (
         <React.Fragment>
           <button className="exit" type="button"><i className="icon icon-exit">X</i></button>
-          <p>Fale agora</p>
-          <button type="button" className={`btn-voice${animation ? ' active' : '' }`} ref={buttoVoiceRef} onClick={stopButton}>
+          <p>{voiceText}</p>
+          <button
+            className={`btn-voice${animation ? ' active' : '' }`}
+            onClick={stopButton}
+            ref={buttoVoiceRef}
+            type="button"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
               <path d="M17 11.998c0 2.76-2.23 5-4.99 5l-.002.002a4.994 4.994 0 01-4.979-5h-2c0 3.52 2.59 6.433 5.98 6.92v3.078h.01V22h2v-3.08h-.01A6.982 6.982 0 0019 11.998z"/>
               <path fill="none" d="M0 0h24v24H0z"/>
