@@ -1,6 +1,10 @@
 .App-config {
   padding: 1em;
   text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
   input { cursor: pointer; }
   a {
     box-sizing: border-box;
