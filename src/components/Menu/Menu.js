@@ -14,12 +14,10 @@ function Menu() {
   useEffect(() => {
     let links = document.querySelectorAll('.App-nav-item')
     for(let link of links) { link.addEventListener('click', menu) }
-
     document.addEventListener('keyup', menuEvent)
 
     return () => {
       for(let link of links) { link.removeEventListener('click', menu) }
-
       document.removeEventListener('keyup', menuEvent)
     }
   })

@@ -99,9 +99,19 @@ function Keyboard({ store, dispatch }) {
     return null
   } else {
     return (
-      <section data-testid="app-keyboard" className={ `App-keyboard${store.keyboard ? ' active' : '' }`} style={{ transform: `translate(${translateX}, ${translateY})` }}>
+      <section
+        data-testid="app-keyboard"
+        className={ `App-keyboard${store.keyboard ? ' active' : '' }`}
+        style={{ transform: `translate(${translateX}, ${translateY})` }}
+      >
         <h1 onMouseDown={onMouseDown} ref={wrapperRef}>português brasileiro</h1>
-        <button className="exit" type="button" onClick={() => dispatch({type: 'TOGGLE_KEYBOARD'})}><i className="icon icon-exit">X</i></button>
+        <button
+          className="exit"
+          onClick={() => dispatch({type: 'TOGGLE_KEYBOARD'})}
+          type="button"
+        >
+          <i className="icon icon-exit">X</i>
+        </button>
         <div className="App-keyboard-content" onClick={onKeyVirtualEvents.bind(this)}>
           <div className="row">
             <button className="key" type="button">'</button>
@@ -117,7 +127,13 @@ function Keyboard({ store, dispatch }) {
             <button className="key" type="button">0</button>
             <button className="key" type="button">-</button>
             <button className="key" type="button">=</button>
-            <button className="key" type="button" style={{width: '62px'}}><i className="icon icon-backspace">backspace</i></button>
+            <button
+              className="key"
+              style={{width: '62px'}}
+              type="button"
+            >
+              <i className="icon icon-backspace">backspace</i>
+            </button>
           </div>
           <div className="row" style={{paddingLeft: '50px'}}>
             <button className="key" type="button">q</button>
@@ -134,7 +150,15 @@ function Keyboard({ store, dispatch }) {
             <button className="key" type="button">[</button>
           </div>
           <div className="row">
-            <button data-testid="capslock" className={ `key${capslock ? ' active' : '' }`} onClick={handleCapslock} type="button" style={{width: '53.75px'}}><i className="icon icon-capslock">capslock</i></button>
+            <button
+              data-testid="capslock"
+              className={ `key${capslock ? ' active' : '' }`}
+              style={{width: '53.75px'}}
+              onClick={handleCapslock}
+              type="button"
+            >
+              <i className="icon icon-capslock">capslock</i>
+            </button>
             <button className="key" type="button">a</button>
             <button className="key" type="button">s</button>
             <button className="key" type="button">d</button>
@@ -149,7 +173,15 @@ function Keyboard({ store, dispatch }) {
             <button className="key" type="button">]</button>
           </div>
           <div className="row">
-            <button data-testid="shift_1" className={ `key${shift ? ' active' : '' }`} onClick={handleShift} type="button" style={{width: '37.25px'}}><i className="icon icon-shitf">shift 1</i></button>
+            <button
+              data-testid="shift_1"
+              className={ `key${shift ? ' active' : '' }`}
+              style={{width: '37.25px'}}
+              onClick={handleShift}
+              type="button"
+            >
+              <i className="icon icon-shitf">shift 1</i>
+            </button>
             <button className="key" type="button">\</button>
             <button className="key" type="button">z</button>
             <button className="key" type="button">x</button>
@@ -161,12 +193,42 @@ function Keyboard({ store, dispatch }) {
             <button className="key" type="button">,</button>
             <button className="key" type="button">.</button>
             <button className="key" type="button">;</button>
-            <button data-testid="shift_2" className={ `key${shift ? ' active' : '' }`} onClick={handleShift} type="button" style={{width: '86.75px'}}><i className="icon icon-shitf">shift 2</i></button>
+            <button
+              data-testid="shift_2"
+              className={ `key${shift ? ' active' : '' }`}
+              style={{width: '86.75px'}}
+              onClick={handleShift}
+              type="button"
+            >
+              <i className="icon icon-shitf">shift 2</i>
+            </button>
           </div>
           <div className="row">
-            <button data-testid="ctrl_alt_1" className={ `key${ctrlalt ? ' active' : '' }`} onClick={handleCtrlAlt} type="button" style={{width: '95px'}}>Ctrl+Alt</button>
-            <button className="key" type="button" style={{width: '293px', fontSize: '0px'}}>whitespace</button>
-            <button data-testid="ctrl_alt_2" className={ `key${ctrlalt ? ' active' : '' }`} onClick={handleCtrlAlt} type="button" style={{width: '95px'}}>Ctrl+Alt</button>
+            <button
+              data-testid="ctrl_alt_1"
+              className={ `key${ctrlalt ? ' active' : '' }`}
+              onClick={handleCtrlAlt}
+              style={{width: '95px'}}
+              type="button"
+            >
+              Ctrl+Alt
+            </button>
+            <button
+              className="key"
+              style={{width: '293px', fontSize: '0px'}}
+              type="button"
+            >
+              whitespace
+            </button>
+            <button
+              data-testid="ctrl_alt_2"
+              className={ `key${ctrlalt ? ' active' : '' }`}
+              onClick={handleCtrlAlt}
+              style={{width: '95px'}}
+              type="button"
+            >
+              Ctrl+Alt
+            </button>
           </div>
         </div>
       </section>

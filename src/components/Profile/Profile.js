@@ -8,28 +8,26 @@ function Profile() {
   const profile = () => setShow(!show)
   const wrapperRef = useRef(null)
 
-  useEffect(() => {
-    /**
-     * Clicked on outside of element
-     */
-    function handleClickOutside(event) {
-        if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-          setShow(false)
-        }
+  const handleClickOutside = (event) => {
+    if (
+      wrapperRef.current &&
+      !wrapperRef.current.contains(event.target)
+    ) {
+      setShow(false)
     }
-    // Bind the event listener
+  }
+
+  useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside)
     return () => {
-        // Unbind the event listener on clean up
-        document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener("mousedown", handleClickOutside)
     };
   });
 
   return (
     <section data-testid="app-profile" className="App-profile" ref={wrapperRef}>
       <h1 onClick={profile}>
-        2L
-        <img src={foto_40} className="App-profile-foto" alt="Foto Frank Sinatra" width="40" height="40" />
+        2L <img src={foto_40} className="App-profile-foto" alt="Foto Frank Sinatra" width="40" height="40" />
       </h1>
       <div className={ `App-profile__content${show ? ' show' : '' }`}>
         <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener">

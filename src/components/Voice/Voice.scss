@@ -60,9 +60,7 @@
     opacity: 1;
     svg { fill: #ea4335; }
   }
-  &:hover {
-    transform: scale(1.1);
-  }
+  &:hover { transform: scale(1.1); }
   svg {
     height: 50%;
     width: 50%;
