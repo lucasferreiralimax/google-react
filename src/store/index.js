@@ -4,7 +4,8 @@ const INITIAL_STATE = {
   keyboard: false,
   voice: false,
   search: '',
-  darkmode: JSON.parse(localStorage.getItem('darkmode'))
+  darkmode: JSON.parse(localStorage.getItem('darkmode')),
+  lang: localStorage.getItem('lang'),
 }
 
 function reducer(state = INITIAL_STATE, action) {
@@ -15,6 +16,8 @@ function reducer(state = INITIAL_STATE, action) {
       return { ...state , voice: !state.voice }
     case 'SET_VOICE':
       return { ...state , voice: action.payload }
+    case 'SET_LANG':
+      return { ...state , lang: action.payload }
     case 'TOGGLE_DARKMODE':
       return { ...state , darkmode: !state.darkmode }
     case 'SEARCH_VALUE':
