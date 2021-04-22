@@ -5,7 +5,7 @@ import './Footer.scss';
 import Darkmode from '../Darkmode/Darkmode';
 import { useTranslation } from 'react-i18next';
 
-function Footer({ store, dispatch }) {
+function Footer({ store }) {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
