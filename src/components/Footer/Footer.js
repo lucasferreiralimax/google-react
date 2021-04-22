@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 import './Footer.scss';
 import Darkmode from '../Darkmode/Darkmode';
+import { useTranslation } from 'react-i18next';
 
-function Footer() {
+function Footer({ store, dispatch }) {
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(store.lang);
+    localStorage.setItem("lang", store.lang);
+  }, [i18n, store.lang]);
+
   return (
     <footer data-testid="app-footer" className="App-footer">
       <div>
@@ -23,10 +32,14 @@ function Footer() {
       <hr className="divider" />
       <div>
         <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener"><strong>@lucasferreiralimax</strong></a>
-        <Link to="/config">Configurações</Link>
+        <Link to="/config">{t('text.config')}</Link>
       </div>
     </footer>
   );
 }
 
-export default Footer;
+function mapStateToProps(state) {
+  return { store: state }
+}
+
+export default connect(mapStateToProps)(Footer);
