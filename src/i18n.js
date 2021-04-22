@@ -13,7 +13,7 @@ i18n
     },
     react: {
       bindI18n: 'languageChanged',
-      useSuspense: true,
+      useSuspense: false,
     }
   });
 
