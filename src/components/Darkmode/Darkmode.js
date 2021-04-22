@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import './Darkmode.scss';
+import { useTranslation } from 'react-i18next';
 
 function Darkmode({ type, store, dispatch }) {
+  const { t } = useTranslation();
 
   const setStyleVariables = (objectVariables) => {
     for(let { name, value } of objectVariables) {
@@ -63,7 +65,7 @@ function Darkmode({ type, store, dispatch }) {
         )
         : (
           <div>
-            <span>Dark Mode</span>
+            <span>{t('text.darkmode')}</span>
             <input id="darkmode" type="checkbox" checked={store.darkmode} />
           </div>
         )

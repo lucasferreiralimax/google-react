@@ -1,8 +1,10 @@
 import React, { useRef, useEffect, useState, useCallback }from 'react';
 import { connect } from 'react-redux';
 import './Voice.scss';
+import { useTranslation } from 'react-i18next';
 
 function Voice({ store, dispatch }) {
+  const { t } = useTranslation();
   const buttoVoiceRef = useRef(null);
   const [animation, setAnimation] = useState(false)
   const [voiceText, setVoiceText] = useState('');
@@ -13,7 +15,7 @@ function Voice({ store, dispatch }) {
 
   const voiceSetup = useCallback(() => {
     if (!('webkitSpeechRecognition' in window)) {
-      console.log('atualize SpeechRecognition')
+      console.log(t('voice.update'))
     } else {
       recognition.current = new window.webkitSpeechRecognition();
       recognition.current.continuous = false;
@@ -21,26 +23,26 @@ function Voice({ store, dispatch }) {
       final_transcript.current = '';
       recognition.current.start();
       ignore_onend.current = false;
-      setVoiceText('Ative o microfone');
+      setVoiceText(t('voice.active_mic'));
 
       recognition.current.onstart = () => {
         recognizing.current = true;
-        setVoiceText('Fale agora');
+        setVoiceText(t('voice.speak_now'));
         setAnimation(true);
       };
 
       recognition.current.onerror = (event) => {
         setAnimation(false);
         if (event.error === 'no-speech') {
-          console.log('onerror voice no-speech');
+          console.log(t('voice.error_no_speech'));
           ignore_onend.current = true;
         }
         if (event.error === 'audio-capture') {
-          console.log('onerror audio-capture');
+          console.log(t('voice.error_audio_capture'));
           ignore_onend.current = true;
         }
         if (event.error === 'not-allowed') {
-          setVoiceText('Ative o microfone');
+          setVoiceText(t('voice.active_mic'));
           ignore_onend.current = true;
         }
       };
@@ -50,7 +52,7 @@ function Voice({ store, dispatch }) {
         if (ignore_onend) { return; }
         if (!final_transcript.current) { return; }
         setAnimation(false);
-        setVoiceText('Fale agora');
+        setVoiceText(t('voice.speak_now'));
       };
 
       recognition.current.onresult = function(event) {
@@ -73,7 +75,7 @@ function Voice({ store, dispatch }) {
         }
       };
     }
-  }, [setVoiceText, recognizing, final_transcript, ignore_onend, dispatch]);
+  }, [t, setVoiceText, recognizing, final_transcript, ignore_onend, dispatch]);
 
   const stopButton = () => {
     if (recognizing.current) {
