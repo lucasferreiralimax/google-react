@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { connect } from 'react-redux';
 import './Keyboard.scss';
+import { useTranslation } from 'react-i18next';
 
 import { shiftEvent, ctrlAltEvent, capslockEvent, backspaceEvent, insertAtCaretEvent } from './events';
 import { noKeysCharEvents } from './utils';
 
 function Keyboard({ store, dispatch }) {
+  const { t } = useTranslation();
   const [width, setWidth] = useState(window.innerWidth)
   const [height, setHeight] = useState(window.innerHeight)
   const [show, setShow] = useState(width > 900 && height > 400)
@@ -104,7 +106,7 @@ function Keyboard({ store, dispatch }) {
         className={ `App-keyboard${store.keyboard ? ' active' : '' }`}
         style={{ transform: `translate(${translateX}, ${translateY})` }}
       >
-        <h1 onMouseDown={onMouseDown} ref={wrapperRef}>português brasileiro</h1>
+        <h1 onMouseDown={onMouseDown} ref={wrapperRef}>{t('text.keyboard_text')}</h1>
         <button
           className="exit"
           onClick={() => dispatch({type: 'TOGGLE_KEYBOARD'})}
