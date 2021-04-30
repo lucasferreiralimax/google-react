@@ -4,6 +4,8 @@ import Keyboard from './Keyboard';
 import noKeysChar from './utils'
 import { Provider } from 'react-redux';
 import store from '../../store';
+import { I18nextProvider } from 'react-i18next';
+import i18n from '../../i18n';
 
 let keys_mock = ['\'', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'backspace', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '´', '[', 'capslock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ç', '~', ']', 'shift 1', '\\', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', ';', 'shift 2', 'Ctrl+Alt', 'whitespace', 'Ctrl+Alt']
 let keys_mock_shift = ['"', '!', '@', '#', '$', '%', '¨', '&', '*', '(', ')', '_', '+', 'backspace', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '`', '{', 'capslock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ç', '^', '}', 'shift 1', '\|', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '<', '>', ':', 'shift 2', 'Ctrl+Alt', 'whitespace', 'Ctrl+Alt']
@@ -21,9 +23,11 @@ function keyMockCheck(keys, mock, config) {
 describe("Should render <Keyboard/>", () => {
   beforeEach(() => {
     render(
-    <Provider store={store}>
-      <Keyboard />
-    </Provider>
+    <I18nextProvider i18n={i18n}>
+      <Provider store={store}>
+        <Keyboard />
+      </Provider>
+    </I18nextProvider>
     );
   });
   it('renders app-keyboard', () => {
