@@ -14,12 +14,12 @@ describe('Test render home page', () => {
   it('Render nav component', () => {
     cy.get('.App-nav-menu').should('exist')
     cy.get('.App-nav-menu svg').should('exist')
-    cy.get('.App-nav-menu').invoke('attr', 'aria-label').should('contain', 'Toggle menu show')
+    cy.get('.App-nav-menu').invoke('attr', 'aria-label').should('contain', 'Alternar menu e mostrar')
   })
   it('Render search component', () => {
     cy.contains('.label-search', 'Pesquise ou digite uma URL')
     cy.get('.label-search .icon-search').should('exist')
-    cy.get('.App-search-input').invoke('attr', 'placeholder').should('contain', 'Pesquise no Google ou digite um URL')
+    cy.get('.App-search-input').invoke('attr', 'placeholder').should('contain', 'Pesquise ou digite uma URL')
   })
   it('Render search buttons', () => {
     cy.get('.App-search .btn.clean').should('exist')

@@ -5,7 +5,7 @@ describe('Test render config page', () => {
     cy.contains('.App-config a', 'Estude o código fonte desse projeto no Github acesse aqui.')
   })
   it('Render config Darkmode', () => {
-    cy.contains('.App-config .darkmode', 'Dark Mode')
+    cy.contains('.App-config .darkmode', 'Modo escuro')
     cy.get('.App-config .darkmode').invoke('attr', 'aria-label').should('contain', 'Toggle darkmode')
   })
 })
