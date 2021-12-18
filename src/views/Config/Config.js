@@ -24,6 +24,8 @@ function Config({ store, dispatch }) {
         >
           <option value="pt">{t('languages.pt')}</option>
           <option value="en">{t('languages.en')}</option>
+          <option value="es">{t('languages.es')}</option>
+          <option value="fr">{t('languages.fr')}</option>
         </select>
         <a
           href="https://github.com/lucasferreiralimax/google-react"

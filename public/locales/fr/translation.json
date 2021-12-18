@@ -1,54 +1,56 @@
 {
   "languages": {
-    "pt": "Português",
-    "en": "Inglês"
+    "pt": "Portugais",
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français"
   },
   "menu": {
-    "home": "Início",
+    "home": "Début",
     "login": "Login",
-    "config": "Configurações",
+    "config": "Configuration",
     "arial_label": {
-      "menu_button": "Alternar menu e mostrar"
+      "menu_button": "Menu alternatif et plus"
     }
   },
   "search_component": {
-    "keyboard": "Teclado Virtual",
-    "alt_keyboard": "Icone Teclado",
-    "clean": "Limpar",
-    "search_voice": "Buscar por voz",
-    "search": "Pesquisa Google",
-    "lucky": "Estou com sorte",
-    "search_label": "Pesquise ou digite uma URL"
+    "keyboard": "Clavier virtuel",
+    "alt_keyboard": "Icône de clavier",
+    "clean": "Nettoyer",
+    "search_voice": "Recherche vocale",
+    "search": "Recherche Google",
+    "lucky": "J'ai de la chance",
+    "search_label": "Rechercher ou saisir une URL"
   },
   "voice": {
-    "update": "Atualize o SpeechRecognition",
-    "error_no_speech": "Erro de voz sem fala",
-    "error_audio_capture": "Erro captura de áudio",
-    "active_mic": "Ative o microfone",
-    "speak_now": "Fale agora"
+    "update": "Mettre à jour le SpeechRecognition",
+    "error_no_speech": "Erreur de voix sans voix",
+    "error_audio_capture": "Erreur de capture audio",
+    "active_mic": "Activer le micro",
+    "speak_now": "Parlez maintenant"
   },
   "login": {
-    "title": "Fazer login",
-    "description": "Use sua Conta do Google",
-    "text": "Não está no seu computador? Use o modo visitante para fazer login com privacidade.",
-    "text_more": "Saiba mais",
+    "title": "Faire login",
+    "description": "Utilisez votre compte Google",
+    "text": "Pas sur votre ordinateur ? Utilisez le mode invité pour vous connecter en toute confidentialité.",
+    "text_more": "Savoir plus",
     "form_email": {
-      "label": "Email ou telefone",
-      "error": "Digite um e-mail ou número de telefone"
+      "label": "Email ou téléphone",
+      "error": "Entrez un e-mail ou un numéro de téléphone"
     },
-    "remember": "Esqueceu seu e-mail?",
-    "new": "Criar conta",
-    "next": "Próxima"
+    "remember": "Vous avez oublié votre e-mail ?",
+    "new": "Créer un compte",
+    "next": "Suivant"
   },
   "text": {
-    "GodIsBig": "Deus é Maior",
-    "config": "Configurações",
-    "darkmode": "Modo escuro",
-    "2L_search": "2L em alto mar",
-    "2L_lucky": "2Lembre sempre na fé não na sorte, firme e forte.",
-    "github": "Estude o código fonte desse projeto no Github acesse aqui.",
-    "keyboard_text": "português brasileiro",
-    "loading": "Carregando"
+    "GodIsBig": "Dieu est Grand",
+    "config": "Configuration",
+    "darkmode": "Mode sombre",
+    "2L_search": "2L en mer",
+    "2L_lucky": "2Lembre toujours dans la foi et non dans la chance, ferme et fort.",
+    "github": "Étudiez le code source de ce projet sur l'accès Github ici.",
+    "keyboard_text": "portugais brésilien",
+    "loading": "Chargement"
   },
   "alt": {
     "LogoGoogle": "Logo Google"

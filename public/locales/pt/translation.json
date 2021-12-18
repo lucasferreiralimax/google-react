@@ -1,7 +1,9 @@
 {
   "languages": {
     "pt": "Português",
-    "en": "Inglês"
+    "en": "Inglês",
+    "es": "Espanhol",
+    "fr": "Francés"
   },
   "menu": {
     "home": "Início",
