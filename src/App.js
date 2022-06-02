@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { Provider } from 'react-redux';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from "react-router-dom";
 import { I18nextProvider } from 'react-i18next';
@@ -29,20 +29,12 @@ function App() {
           <Router>
             <div className="App">
               <Menu />
-              <Switch>
-                <Route path="/login">
-                  <Login />
-                </Route>
-                <Route path="/config">
-                  <Config />
-                </Route>
-                <Route path="/" exact>
-                  <Home />
-                </Route>
-                <Route path="*" exact>
-                  <Notfound />
-                </Route>
-              </Switch>
+              <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/config" element={<Config />} />
+                <Route path="/" exact element={<Home />} />
+                <Route path="*" exact element={<Notfound />} />
+              </Routes>
               <Footer />
             </div>
           </Router>
