@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { act } from "react-dom/test-utils";
 import App from './App';
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
@@ -24,39 +25,38 @@ const renderWithRouter = (ui, { route = '/' } = {}) => {
   return render(ui)
 }
 
+beforeEach(async () => {
+  await act(async () => {
+    renderWithRouter(<AppWapper />, { route: '/' });
+  });
+});
+
 describe("Should render <App/>", () => {
   it('renders app-nav', () => {
-    render(<AppWapper />);
     expect(screen.getByTestId('app-nav')).toBeInTheDocument();
   });
 
   it('renders app-header', () => {
-    render(<AppWapper />);
     expect(screen.getByTestId('app-header')).toBeInTheDocument();
   });
 
   it('renders app-profile', () => {
-    render(<AppWapper />);
     expect(screen.getByTestId('app-profile')).toBeInTheDocument();
   });
 
   it('renders app-keyboard', () => {
-    renderWithRouter(<AppWapper />, { route: '/' })
     expect(screen.getByTestId('app-keyboard')).toBeInTheDocument();
   });
 
   it('renders app-voice', () => {
-    renderWithRouter(<AppWapper />, { route: '/' })
     expect(screen.getByTestId('app-voice')).toBeInTheDocument();
   });
 
   it('renders app-search', () => {
-    renderWithRouter(<AppWapper />, { route: '/' })
     expect(screen.getByTestId('app-search')).toBeInTheDocument();
   });
 
   it('renders app-footer', () => {
-    render(<AppWapper />);
     expect(screen.getByTestId('app-footer')).toBeInTheDocument();
   });
 });
