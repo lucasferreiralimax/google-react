@@ -17,6 +17,7 @@ function reducer(state = INITIAL_STATE, action) {
     case 'SET_VOICE':
       return { ...state , voice: action.payload }
     case 'SET_LANG':
+      document.documentElement.lang = action.payload
       return { ...state , lang: action.payload }
     case 'TOGGLE_DARKMODE':
       return { ...state , darkmode: !state.darkmode }
