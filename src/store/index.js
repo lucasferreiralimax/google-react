@@ -8,6 +8,8 @@ const INITIAL_STATE = {
   lang: localStorage.getItem('lang'),
 }
 
+document.documentElement.lang = localStorage.getItem('lang') ? localStorage.getItem('lang') : 'en';
+
 function reducer(state = INITIAL_STATE, action) {
   switch(action.type) {
     case 'TOGGLE_KEYBOARD':
