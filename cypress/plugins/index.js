@@ -1,8 +1,6 @@
 module.exports = (on, config) => {
-  require('@cypress/react/plugins/react-scripts')(on, config)
-  // IMPORTANT to return the config object
-  // with the any changed environment variables
-  return Object.assign({}, config, {
-    integrationFolder: 'cypress/specs',
+  // bind to the event we care about
+  on('<event>', (arg1, arg2) => {
+    // plugin stuff here
   })
 }
