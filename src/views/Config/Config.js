@@ -19,7 +19,7 @@ function Config({ store, dispatch }) {
         <select
           className="App-language"
           name="language"
-          value={store.lang}
+          value={store.lang ? store.lang : ""}
           onChange={e => dispatch({type: 'SET_LANG', payload: e.target.value})}
         >
           <option value="pt">{t('languages.pt')}</option>
