@@ -2,7 +2,11 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './Notfound.scss';
 
+import { useTranslation } from 'react-i18next';
+
 function Notfound() {
+  const { t } = useTranslation();
+
   useEffect(() => {
     document.body.classList.add('notfound');
     return () => {
@@ -14,9 +18,9 @@ function Notfound() {
       <Link to="/">
         <span className="logo" aria-label="Google"></span>
       </Link>
-      <p><b>404.</b> Esse é um erro.</p>
+      <p><b>404.</b> {t('notfound.text1')}</p>
       <br/>
-      <p>O URL <b className="highlight">{ window.location.pathname }</b> solicitado não foi encontrado. Isso é tudo que sabemos.</p>
+      <p>{t('notfound.text2')} <b className="highlight">{ window.location.pathname }</b> {t('notfound.text3')}</p>
     </section>
   );
 }

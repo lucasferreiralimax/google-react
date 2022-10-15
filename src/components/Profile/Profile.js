@@ -3,7 +3,10 @@ import './Profile.scss';
 import foto_40 from '../../assets/sinatra-40x40.jpg';
 import foto_150 from '../../assets/sinatra-150x150.jpg';
 
+import { useTranslation } from 'react-i18next';
+
 function Profile() {
+  const { t } = useTranslation();
   const [show, setShow] = useState(false)
   const profile = () => setShow(!show)
   const wrapperRef = useRef(null)
@@ -35,11 +38,11 @@ function Profile() {
         </a>
         <h1>Lucas Lima</h1>
         <h2>lucasferreiralimax@gmail.com</h2>
-        <button type="button">Gerenciar sua Conta do Google</button>
+        <button type="button">{t('profile_component.config')}</button>
         <div className="divider">
-          <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener">Política de Privacidade</a>
+          <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener">{t('profile_component.politics')}</a>
           <div className="bullet">•</div>
-          <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener">Termos de Serviço</a>
+          <a href="https://github.com/lucasferreiralimax" target="_blank" rel="noreferrer noopener">{t('profile_component.terms')}</a>
         </div>
       </div>
     </section>
