@@ -7,7 +7,7 @@ jobs:
   build_and_preview:
     runs-on: ubuntu-latest
     steps:
-      - uses: checkout@v3
+      - uses: actions/checkout@v3
       - run: npm ci && npm run build
       - name: Test unit
         run: npm run test -- --watchAll=false
