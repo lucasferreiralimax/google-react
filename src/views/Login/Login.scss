@@ -52,7 +52,7 @@
     margin: 0 auto;
   }
   a {
-    color: var(--main-color-primary);
+    color: rgb(var(--main-color-primary));
     font-weight: 500;
     letter-spacing: .25px;
     text-decoration: none;
@@ -68,7 +68,7 @@
     text-transform: none;
     &:hover { box-shadow: 0 0 0 1px rgba(var(--main-color-rgb),0.3); }
     &.primary {
-      background: var(--main-color-primary);
+      background: rgb(var(--main-color-primary));
       color: #fff;
       float: right;
       &:hover { background: #1c5fba; }

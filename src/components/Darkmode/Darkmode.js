@@ -17,12 +17,14 @@ function Darkmode({ type, store, dispatch }) {
 
     !store.darkmode
     ? setStyleVariables([
-      { name: '--main-color',              value: '#000'                       },
+      { name: '--main-color',              value: '#303030'                    },
       { name: '--main-color-rgb',          value: '0,0,0'                      },
-      { name: '--main-color-primary',      value: '#1a73e8'                    },
+      { name: '--main-color-primary',      value: '26, 115, 232'               },
       { name: '--main-color-secondary',    value: 'green'                      },
       { name: '--main-bg-color-primary',   value: '#fff'                       },
       { name: '--main-bg-color-secondary', value: '#f2f2f2'                    },
+      { name: '--main-bg-color-profile',   value: '#e9eef6'                    },
+      { name: '--main-border-color',       value: '#747775'                    },
       { name: '--main-invert',             value: '0'                          },
       { name: '--logo-filter',             value: 'none'                       },
       { name: '--input-bg-color',          value: '#fff'                       },
@@ -32,10 +34,12 @@ function Darkmode({ type, store, dispatch }) {
     : setStyleVariables([
       { name: '--main-color',              value: '#fff'                       },
       { name: '--main-color-rgb',          value: '255,255,255'                },
-      { name: '--main-color-primary',      value: '#1a73e8'                    },
+      { name: '--main-color-primary',      value: '26, 115, 232'               },
       { name: '--main-color-secondary',    value: 'green'                      },
       { name: '--main-bg-color-primary',   value: '#202124'                    },
       { name: '--main-bg-color-secondary', value: '#171717'                    },
+      { name: '--main-bg-color-profile',   value: '#202124'                    },
+      { name: '--main-border-color',       value: '#747775'                    },
       { name: '--main-invert',             value: '1'                          },
       { name: '--logo-filter',             value: 'grayscale(1) brightness(3)' },
       { name: '--input-bg-color',          value: '#202124'                    },
