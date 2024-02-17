@@ -12,7 +12,7 @@ describe("Should render <Profile/>", () => {
       </I18nextProvider>
     );
     const altFoto = screen.getAllByAltText(/Foto Frank Sinatra/i);
-    const userName = screen.getByText(/2L/i);
+    const userName = screen.getByText(/@lucasferreiralimax/i);
     const name = screen.getByText(/Lucas Lima/i);
     const email = screen.getByText(/lucasferreiralimax@gmail.com/i);
     const linkPrivacidade = screen.getByText(/profile_component.politics/i);
