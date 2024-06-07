@@ -21,7 +21,7 @@
     "react-scripts": "^5.0.1",
     "redux": "^5.0.1",
     "sass": "^1.77.4",
-    "web-vitals": "^4.0.1",
+    "web-vitals": "^4.1.0",
     "workbox-background-sync": "^7.1.0",
     "workbox-broadcast-update": "^7.1.0",
     "workbox-cacheable-response": "^7.1.0",
