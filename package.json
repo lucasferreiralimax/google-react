@@ -20,7 +20,7 @@
     "react-router-dom": "^6.26.2",
     "react-scripts": "^5.0.1",
     "redux": "^5.0.1",
-    "sass": "^1.78.0",
+    "sass": "^1.79.1",
     "web-vitals": "^4.2.3",
     "workbox-background-sync": "^7.1.0",
     "workbox-broadcast-update": "^7.1.0",
